@@ -1,6 +1,7 @@
 interface ImigxOpts {
   fm?: string;
   height?: number;
+  width?: number;
 }
 
 export const acceptedFormats = [
@@ -18,6 +19,10 @@ export const acceptedFormats = [
   'application/x-pdf',
   'image/heic',
 ]
+
+export const openGraphUrl = (baseUrl: string): string => {
+  return imigxUrl(baseUrl, { width: 1200, height: 1200 })
+}
 
 export const imigxUrl = (baseUrl: string, opts: ImigxOpts = {}): string => {
   if (baseUrl.indexOf('?') === -1) {

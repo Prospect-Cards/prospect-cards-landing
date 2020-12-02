@@ -7,10 +7,11 @@ import {
   Grid,
   Typography,
 } from '@material-ui/core'
-import ButtonLink  from 'components/common/ButtonLink'
 import { ListingQuery, ListingStatusEnum } from 'types/graphql'
+import { openGraphUrl } from 'lib/image'
 import AcceptListingReportsButton from 'components/admin/AcceptListingReportsButton'
 import AdminComponent from 'components/AdminComponent'
+import ButtonLink from 'components/common/ButtonLink'
 import Carousel from 'components/common/Carousel'
 import FavoriteListingToggle from 'components/favorites/FavoriteListingToggle'
 import Helmet from 'react-helmet'
@@ -37,12 +38,16 @@ const Listing = ({ data: { listing } }: Props): JSX.Element => {
     status,
     ownedByUser,
     isFavorited,
+    images,
   } = listing
 
   return (
     <>
       <Helmet>
-        <title>Prospect Cards - {listing.title}</title>
+        <title>Prospect Cards - {title}</title>
+        <meta property='og:title' content={ title } />
+        <meta property='og:image' content={ openGraphUrl(images[0].url) } />
+        <meta property='og:site_name' content='Prospect Cards'/>
       </Helmet>
       <div className={ classes.root }>
         <Card className={ classes.card }>
