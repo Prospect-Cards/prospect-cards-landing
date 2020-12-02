@@ -21,8 +21,7 @@ const AppContainer = ({ Component, pageProps }: AppProps): Maybe<JSX.Element> =>
   if (loading) return null
 
   return (
-    <MuiThemeProvider theme={ theme }>
-      <CssBaseline />
+    <>
       <Elements stripe={ stripe }>
         <NavBar />
         <main className={ classes.content }>
@@ -35,7 +34,7 @@ const AppContainer = ({ Component, pageProps }: AppProps): Maybe<JSX.Element> =>
 
         <ToastContainer position={ toast.POSITION.BOTTOM_CENTER } />
       </Elements>
-    </MuiThemeProvider>
+    </>
   )
 }
 

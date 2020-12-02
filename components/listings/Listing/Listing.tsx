@@ -14,7 +14,7 @@ import AdminComponent from 'components/AdminComponent'
 import ButtonLink from 'components/common/ButtonLink'
 import Carousel from 'components/common/Carousel'
 import FavoriteListingToggle from 'components/favorites/FavoriteListingToggle'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import OfferForm from 'components/OfferForm'
 import PrivateComponent from 'components/PrivateComponent'
 import React from 'react'
@@ -41,14 +41,17 @@ const Listing = ({ data: { listing } }: Props): JSX.Element => {
     images,
   } = listing
 
+  if (typeof window === 'undefined') {
+    console.log('rendering server')
+  }
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Prospect Cards - {title}</title>
         <meta property='og:title' content={ title } />
         <meta property='og:image' content={ openGraphUrl(images[0].url) } />
         <meta property='og:site_name' content='Prospect Cards'/>
-      </Helmet>
+      </Head>
       <div className={ classes.root }>
         <Card className={ classes.card }>
           <CardContent>
