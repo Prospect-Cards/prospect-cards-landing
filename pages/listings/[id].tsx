@@ -8,15 +8,13 @@ export const getServerSideProps: GetServerSideProps = async({
 }) => {
   const apolloClient = initializeApollo()
 
-  const res = await apolloClient.query({
+  await apolloClient.query({
     query: ListingDocument,
     variables: { id: +id },
   })
 
   return addApolloState(apolloClient, {
-    props: {
-      data: res.data,
-    },
+    props: {},
   })
 }
 
