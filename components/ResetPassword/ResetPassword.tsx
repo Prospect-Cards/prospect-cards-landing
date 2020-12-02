@@ -42,7 +42,7 @@ const ResetPassword = ({ refresh }: Props): JSX.Element => {
 
     setLoading(true)
 
-    fetch(`${process.env.apiUri}/users/password.json`, {
+    fetch(`${process.env.API_URI}/users/password.json`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

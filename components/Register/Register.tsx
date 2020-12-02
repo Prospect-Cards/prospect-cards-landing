@@ -41,7 +41,7 @@ const Register = ({ refresh }: Props): JSX.Element => {
     event.preventDefault()
     setLoading(true)
 
-    fetch(`${process.env.apiUri}/users.json`, {
+    fetch(`${process.env.API_URI}/users.json`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

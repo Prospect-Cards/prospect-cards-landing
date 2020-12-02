@@ -1,11 +1,13 @@
-import { useSaveListingMutation } from 'types/graphql'
-import Dumb from './NewListing'
-import React from 'react'
+import { AppProps } from 'next/app'
+import NewListing from 'components/listings/NewListing'
+import PrivateRoute from 'components/PrivateRoute'
 
-const NewListing = (): JSX.Element => {
-  const [saveListing, { loading: saveLoading }] = useSaveListingMutation()
-
-  return <Dumb saveListing={ saveListing } loading={ saveLoading } />
+const NewListingRoute = ({ pageProps }: AppProps): JSX.Element => {
+  return (
+    <PrivateRoute>
+      <NewListing { ...pageProps } />
+    </PrivateRoute>
+  )
 }
 
-export default NewListing
+export default NewListingRoute

@@ -1,18 +1,12 @@
-import { AppProps } from 'next/app'
-import React from 'react'
-
-export interface Props extends AppProps {
+export interface Props {
   isAuthenticated: boolean;
+  children: JSX.Element;
 }
 
-const PrivateRoute = ({
-  Component,
-  isAuthenticated,
-  pageProps,
-}: Props): JSX.Element => {
+const PrivateRoute = ({ children, isAuthenticated }: Props): JSX.Element => {
   if (isAuthenticated) {
-    return <Component { ...pageProps } />
-  } else if (typeof window !== 'undefined'){
+    return children
+  } else if (typeof window !== 'undefined') {
     window.location.href = '/'
   }
 }

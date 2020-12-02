@@ -1,9 +1,11 @@
-import { AppProps } from 'next/app'
 import { Maybe, useMaybeViewerQuery } from 'types/graphql'
 import PrivateRouteComponent from './PrivateRoute'
 import React from 'react'
 
-const PrivateRoute = ({ pageProps }: AppProps): Maybe<JSX.Element> => {
+interface Props {
+  children: JSX.Element
+}
+const PrivateRoute = (props: Props): Maybe<JSX.Element> => {
   const { data, loading, client, error } = useMaybeViewerQuery()
 
   if (loading || typeof window === 'undefined') return null
@@ -17,7 +19,7 @@ const PrivateRoute = ({ pageProps }: AppProps): Maybe<JSX.Element> => {
 
   return (
     <PrivateRouteComponent
-      { ...pageProps }
+      { ...props }
       isAuthenticated={ !!(data && data.maybeViewer) }
     />
   )

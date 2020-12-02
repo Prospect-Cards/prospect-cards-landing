@@ -41,7 +41,7 @@ const Login = ({ refresh }: Props): JSX.Element => {
     event.preventDefault()
     setLoading(true)
 
-    fetch(`${process.env.apiUri}/users/sign_in`, {
+    fetch(`${process.env.API_URI}/users/sign_in`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

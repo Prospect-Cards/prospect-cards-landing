@@ -14,7 +14,7 @@ const ConfirmEmail = (): Maybe<JSX.Element> => {
 
   useEffect(() => {
     fetch(
-      `${process.env.apiUri}/users/confirmation.json?confirmation_token=${token}`,
+      `${process.env.API_URI}/users/confirmation.json?confirmation_token=${token}`,
       {
         method: 'GET',
         headers: {
