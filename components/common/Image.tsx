@@ -1,10 +1,12 @@
 import { ListingImageFragment } from 'types/graphql'
 import { imigxUrls } from 'lib/image'
+import NImage from 'next/image'
 import React from 'react'
 
 interface Props {
   image: ListingImageFragment;
   height?: number;
+  width?: number;
   alt?: string;
   className?: string;
 }
@@ -14,6 +16,7 @@ const Image = ({
   alt,
   className,
   height = 240,
+  width = height * 0.72,
 }: Props): JSX.Element => {
   const { urls, fallbackUrl } = imigxUrls(url, { height })
 
@@ -22,7 +25,15 @@ const Image = ({
       {urls.map((url) => (
         <source key={ url } srcSet={ url } />
       ))}
-      {fallbackUrl && <img className={ className } src={ fallbackUrl } alt={ alt } />}
+      {fallbackUrl && (
+        <NImage
+          className={ className }
+          src={ fallbackUrl }
+          alt={ alt }
+          height={ height }
+          width={ width }
+        />
+      )}
     </picture>
   )
 }

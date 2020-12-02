@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/.next/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/server" />
+      <excludeFolder url="file://$MODULE_DIR$/.next/static" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

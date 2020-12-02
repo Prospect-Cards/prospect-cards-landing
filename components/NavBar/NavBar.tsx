@@ -51,9 +51,14 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
     setMobileMoreAnchorEl(null)
   }
 
-  const handleMenuItemClick = (route: string) => () => {
+  const handleMenuClose = () => {
     setAnchorEl(null)
     handleMobileMenuClose()
+  }
+
+
+  const handleMenuItemClick = (route: string) => () => {
+    handleMenuClose()
     router.push(route)
   }
 
@@ -70,7 +75,7 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
       keepMounted
       transformOrigin={ { vertical: 'top', horizontal: 'right' } }
       open={ isMenuOpen }
-      onClose={ handleMenuItemClick }
+      onClose={ handleMenuClose }
     >
       <MenuItem onClick={ handleMenuItemClick('/profile/details') } >
         Profile
