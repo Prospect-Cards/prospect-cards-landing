@@ -1,12 +1,13 @@
 import { Maybe } from 'types/graphql'
 import { useApolloClient } from '@apollo/client'
-import { useParams } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import Dumb from './ConfirmEmail'
 import React, { useEffect, useState } from 'react'
 import Spinner from 'components/common/Spinner'
 
 const ConfirmEmail = (): Maybe<JSX.Element> => {
-  const { token } = useParams<{ token: string }>()
+  const router = useRouter()
+  const { token } = router.query
   const [loading, setLoading] = useState(true)
   const [message, setMessage] = useState<string>()
   const client = useApolloClient()

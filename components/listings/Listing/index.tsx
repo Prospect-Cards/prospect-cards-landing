@@ -1,12 +1,13 @@
 import { useListingQuery } from 'types/graphql'
-import { useParams } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import Dumb from './Listing'
 import ErrorMessage from 'components/common/ErrorMessage'
 import React from 'react'
 import Spinner from 'components/common/Spinner'
 
 const Listing = (): JSX.Element => {
-  const { id } = useParams<{ id: string }>()
+  const router = useRouter()
+  const { id } = router.query
   // const [trackInterest] = useTrackInterestMutation({
   //   variables: { listingId: +id },
   // })

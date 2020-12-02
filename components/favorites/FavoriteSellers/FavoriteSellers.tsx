@@ -1,8 +1,9 @@
 import { Button, Paper, Typography } from '@material-ui/core'
 import { FavoriteSellersQuery } from 'types/graphql'
-import { Link, useHistory } from 'react-router-dom'
 import { dateFormat } from 'lib/time'
+import { useRouter } from 'next/router'
 import FavoriteSellerToggle from 'components/favorites/FavoriteSellerToggle'
+import Link from 'components/common/Link'
 import React from 'react'
 import StopPropogation from 'components/common/StopPropogation'
 import useStyles from './styles'
@@ -16,7 +17,7 @@ const FavoriteSellers = ({
     viewer: { favoriteSellers },
   },
 }: Props): JSX.Element => {
-  const history = useHistory()
+  const router = useRouter()
 
   const classes = useStyles()
 
@@ -28,7 +29,7 @@ const FavoriteSellers = ({
             key={ seller.id }
             className={ classes.seller }
             onClick={ () => {
-              history.push(`/sellers/${seller.id}`)
+              router.push(`/sellers/${seller.id}`)
             } }
           >
             <div className={ classes.usernameImageContainer }>

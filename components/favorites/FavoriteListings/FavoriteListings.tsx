@@ -2,7 +2,7 @@ import { FavoriteListingsQuery } from 'types/graphql'
 import { Link, Paper, Typography } from '@material-ui/core'
 import { centsToDollars } from 'lib/money'
 import { dateFormat } from 'lib/time'
-import { useHistory } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import FavoriteListingToggle from 'components/favorites/FavoriteListingToggle'
 import Image from 'components/common/Image'
 import OfferForm from 'components/OfferForm'
@@ -19,7 +19,7 @@ const FavoriteListings = ({
     viewer: { favoriteListings },
   },
 }: Props): JSX.Element => {
-  const history = useHistory()
+  const router = useRouter()
 
   const classes = useStyles()
 
@@ -31,7 +31,7 @@ const FavoriteListings = ({
             key={ listing.id }
             className={ classes.listing }
             onClick={ () => {
-              history.push(`/listings/${listing.id}`)
+              router.push(`/listings/${listing.id}`)
             } }
           >
             <Image image={ listing.images[0] } className={ classes.img } />
@@ -41,7 +41,7 @@ const FavoriteListings = ({
             <StopPropogation>
               <Link
                 onClick={ () =>
-                  history.push(`/sellers/${listing.seller.username}`)
+                  router.push(`/sellers/${listing.seller.username}`)
                 }
               >
                 {listing.seller.username}

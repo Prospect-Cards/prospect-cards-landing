@@ -17,7 +17,7 @@ import {
 } from 'types/graphql'
 import { NotRequiredArraySchema } from 'yup'
 import { checkFileSize } from 'lib'
-import { useHistory } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import ConfirmEmailDialog from 'components/ConfirmEmailDialog'
 import DollarInput from 'components/common/formFields/DollarInput'
 import FormTextField from 'components/common/formFields/FormTextField'
@@ -79,7 +79,7 @@ const title = ({
 
 const NewListing = ({ saveListing, loading }: Props): JSX.Element => {
   const classes = useStyles()
-  const history = useHistory()
+  const router = useRouter()
 
   const initialValues: {
     listing: ListingInput;
@@ -117,7 +117,7 @@ const NewListing = ({ saveListing, loading }: Props): JSX.Element => {
                 setSubmitting(false)
                 if (!variables.sellAnother && newListingId) {
                   resetForm()
-                  history.push(`/items/listings/${newListingId}`)
+                  router.push(`/items/listings/${newListingId}`)
                 }
               })
             } }

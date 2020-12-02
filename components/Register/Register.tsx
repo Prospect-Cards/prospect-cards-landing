@@ -1,5 +1,5 @@
-import { RouteComponentProps } from 'react-router'
 import { toast } from 'react-toastify'
+import { useRouter } from 'next/router'
 import AuthScreen from 'components/common/AuthScreen'
 import LoadingButton from 'components/common/LoadingButton'
 import React, { SyntheticEvent, useState } from 'react'
@@ -10,11 +10,12 @@ interface SignInResp {
   message: string;
 }
 
-interface Props extends RouteComponentProps {
+interface Props {
   refresh: () => Promise<void>;
 }
 
-const Register = ({ history, location, refresh }: Props): JSX.Element => {
+const Register = ({ refresh }: Props): JSX.Element => {
+  const router = useRouter()
   const [fields, setFields] = useState({
     email: '',
     username: '',
@@ -54,10 +55,7 @@ const Register = ({ history, location, refresh }: Props): JSX.Element => {
         if (response.status === 201 && token) {
           localStorage.setItem('prospect-cards-token', token)
           await refresh()
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          const referrer = location.state && location.state.from
-          history.push(referrer || '/')
+          router.push('/')
         } else {
           toast.error(response.statusText)
         }

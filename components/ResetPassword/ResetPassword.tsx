@@ -1,8 +1,7 @@
 import * as Yup from 'yup'
 import { Form, Formik } from 'formik'
-import { RouteComponentProps } from 'react-router'
 import { toast } from 'react-toastify'
-import { useParams } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import AuthScreen from 'components/common/AuthScreen'
 import LoadingButton from 'components/common/LoadingButton'
 import React, { useState } from 'react'
@@ -13,7 +12,7 @@ interface SignInResp {
   message: string;
 }
 
-interface Props extends RouteComponentProps {
+interface Props {
   refresh: () => Promise<void>;
 }
 
@@ -27,8 +26,10 @@ const FormSchema = Yup.object().shape({
   ),
 })
 
-const ResetPassword = ({ history, location, refresh }: Props): JSX.Element => {
-  const { token } = useParams<{ token: string }>()
+const ResetPassword = ({ refresh }: Props): JSX.Element => {
+  const router = useRouter()
+  const { token } = router.query
+
   const initialValues = {
     password: '',
     password_confirmation: '',
@@ -55,10 +56,7 @@ const ResetPassword = ({ history, location, refresh }: Props): JSX.Element => {
         if (response.status === 204 && token) {
           localStorage.setItem('prospect-cards-token', token)
           await refresh()
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          const referrer = location.state && location.state.from
-          history.push(referrer || '/')
+          router.push('/')
         } else {
           toast.error(
             'Unable to reset password. This URL may be expired. Try requesting a new reset password link.',

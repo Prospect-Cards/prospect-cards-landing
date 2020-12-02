@@ -3,15 +3,25 @@ import {
   usePurchaseQuery,
   useSaveReviewMutation,
 } from 'types/graphql'
-import { useParams } from 'react-router'
+import { useRouter } from 'next/router'
 import Dumb from './NewReview'
 import ErrorMessage from 'components/common/ErrorMessage'
 import React from 'react'
 import Spinner from 'components/common/Spinner'
 
 const NewReview = (): JSX.Element => {
-  const { token } = useParams<{ token: string }>()
-  const { data, loading, error } = usePurchaseQuery({ variables: { token } })
+  const router = useRouter()
+  const { token } = router.query
+  let tokenValue
+  if (typeof token === 'string') {
+    tokenValue = token
+  } else {
+    tokenValue = token[0]
+  }
+
+  const { data, loading, error } = usePurchaseQuery({
+    variables: { token: tokenValue },
+  })
   const [saveReview, { loading: saveLoading }] = useSaveReviewMutation()
 
   const handleSubmit = (values: ReviewInput): void => {

@@ -1,19 +1,23 @@
 import { Maybe, useMaybeViewerQuery } from 'types/graphql'
-import { Redirect, RouteComponentProps, withRouter } from 'react-router'
+import { useRouter } from 'next/router'
 import React from 'react'
 import ResetPasswordComponent from './ResetPassword'
 
-const ResetPassword = (props: RouteComponentProps): Maybe<JSX.Element> => {
+const ResetPassword = (): Maybe<JSX.Element> => {
+  const router = useRouter()
   const { data, loading, refetch } = useMaybeViewerQuery()
 
   if (loading) return null
-  if (data && data.maybeViewer) return <Redirect to='/' />
+  if (data && data.maybeViewer) {
+    router.push('/')
+    return
+  }
 
   const refresh = async(): Promise<void> => {
     await refetch()
   }
 
-  return <ResetPasswordComponent { ...props } refresh={ refresh } />
+  return <ResetPasswordComponent refresh={ refresh } />
 }
 
-export default withRouter(ResetPassword)
+export default ResetPassword
