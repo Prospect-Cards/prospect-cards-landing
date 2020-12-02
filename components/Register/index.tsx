@@ -10,7 +10,7 @@ const Register = (): Maybe<JSX.Element> => {
   if (loading) return null
   if (data && data.maybeViewer) {
     router.push('/')
-    return
+    return null
   }
 
   const refresh = async(): Promise<void> => {

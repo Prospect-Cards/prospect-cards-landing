@@ -2,7 +2,7 @@ import {
   useEmailPreferencesQuery,
   useSaveEmailPreferencesMutation,
 } from 'types/graphql'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 import Dumb from './EmailPreferences'
 import ErrorMessage from 'components/common/ErrorMessage'
 import React from 'react'
@@ -15,11 +15,10 @@ const EmailPreferences = (): JSX.Element => {
   let tokenValue
   if (typeof token === 'string') {
     tokenValue = token
-  } else {
+  } else if (token) {
     tokenValue = token[0]
   }
 
-  console.log('eric', tokenValue)
   const { data, loading, error } = useEmailPreferencesQuery({
     variables: { token: tokenValue },
   })
