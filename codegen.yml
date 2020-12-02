@@ -1,0 +1,29 @@
+overwrite: true
+schema: 'http://localhost:3000/v1/schema'
+generates:
+  src/types/graphql.tsx:
+    documents:
+      - src/graphql/queries/**/*.ts
+      - src/graphql/fragments/**/*.ts
+      - src/graphql/mutations/**/*.ts
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHOC: false
+      withHooks: true
+      apolloReactHooksImportFrom: '@apollo/client'
+      apolloReactCommonImportFrom: '@apollo/client'
+      avoidOptionals:
+        field: true
+        inputValue: false
+  ./graphql.schema.json:
+    plugins:
+      - introspection
+  src/types/fragmentTypes.ts:
+    overwrite: true
+    plugins:
+      - fragment-matcher
+    config:
+      apolloClientVersion: 3
