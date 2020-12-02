@@ -1,9 +1,12 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import 'styles/carousel.css'
+import 'styles/reactiveSearch.css'
 import { ApolloProvider } from '@apollo/client'
 import AppContainer from 'components/AppContainer'
 import ErrorBoundary from 'components/ErrorBoundary'
 import Helmet from 'react-helmet'
 import type { AppProps /*, AppContext */ } from 'next/app'
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import HttpsRedirect from 'react-https-redirect'
