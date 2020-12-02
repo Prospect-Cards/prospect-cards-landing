@@ -100,7 +100,7 @@ const createApolloClient = () => {
   return new ApolloClient({
     cache: cache,
     link,
-    ssrMode: typeof window === 'undefined',
+    ssrMode: true,
   })
 }
 
