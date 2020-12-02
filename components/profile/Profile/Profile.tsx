@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import AccountDetails from 'components/profile/AccountDetails'
 import AddPayment from 'components/account/AddPayment'
 import EmailPreferences from 'components/profile/EmailPreferences'
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent } from 'react'
 import useStyles from './styles'
 
 type TabName = 'details' | 'payment' | 'preferences';
@@ -18,10 +18,9 @@ const Profile = (): JSX.Element => {
   } else {
     tabName = tab[0]
   }
-  const [value, setValue] = useState<TabName>(tabName || 'details')
 
   const handleChange = (event: ChangeEvent<unknown>, newValue: TabName) => {
-    setValue(newValue)
+    if (newValue) router.push(`${newValue}`)
   }
 
   interface TabPanelProps {
@@ -52,7 +51,7 @@ const Profile = (): JSX.Element => {
       <Tabs
         orientation='vertical'
         variant='scrollable'
-        value={ value }
+        value={ tabName }
         onChange={ handleChange }
         aria-label='Profile tabs'
         className={ classes.tabs }
@@ -62,13 +61,13 @@ const Profile = (): JSX.Element => {
         <Tab label='Email Preferences' value='preferences' />
       </Tabs>
 
-      <TabPanel value={ value } index='details'>
+      <TabPanel value={ tabName } index='details'>
         <AccountDetails />
       </TabPanel>
-      <TabPanel value={ value } index='payment'>
+      <TabPanel value={ tabName } index='payment'>
         <AddPayment />
       </TabPanel>
-      <TabPanel value={ value } index='preferences'>
+      <TabPanel value={ tabName } index='preferences'>
         <EmailPreferences />
       </TabPanel>
     </div>
