@@ -5,6 +5,7 @@ import theme from 'lib/theme'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
+    debugger
     // Render app and page and get the context of the page with collected side effects.
     const sheets = new ServerStyleSheets()
     const originalRenderPage = ctx.renderPage
@@ -31,7 +32,12 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name='theme-color' content={ theme.palette.primary.main } />
-
+          <meta property='og:site_name' content='Prospect Cards' />
+          <meta property='og:type' content='website' />
+          <meta
+            property='og:description'
+            content='Sports Card Marketplace by Collectors for Collectors'
+          />
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap'

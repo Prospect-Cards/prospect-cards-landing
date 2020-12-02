@@ -41,16 +41,16 @@ const Listing = ({ data: { listing } }: Props): JSX.Element => {
     images,
   } = listing
 
-  if (typeof window === 'undefined') {
-    console.log('rendering server')
-  }
   return (
     <>
       <Head>
         <title>Prospect Cards - {title}</title>
         <meta property='og:title' content={ title } />
         <meta property='og:image' content={ openGraphUrl(images[0].url) } />
-        <meta property='og:site_name' content='Prospect Cards'/>
+        <meta
+          property='og:url'
+          content={ `${process.env.NEXT_PUBLIC_CLIENT_URI}/listings/${id}` }
+        />
       </Head>
       <div className={ classes.root }>
         <Card className={ classes.card }>
