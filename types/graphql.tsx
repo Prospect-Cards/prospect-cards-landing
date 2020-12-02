@@ -3,6 +3,8 @@ import * as ApolloReactCommon from '@apollo/client';
 import * as ApolloReactHooks from '@apollo/client';
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -2415,7 +2417,7 @@ export const InvitedViewerDocument = gql`
  *   },
  * });
  */
-export function useInvitedViewerQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<InvitedViewerQuery, InvitedViewerQueryVariables>) {
+export function useInvitedViewerQuery(baseOptions: ApolloReactHooks.QueryHookOptions<InvitedViewerQuery, InvitedViewerQueryVariables>) {
         return ApolloReactHooks.useQuery<InvitedViewerQuery, InvitedViewerQueryVariables>(InvitedViewerDocument, baseOptions);
       }
 export function useInvitedViewerLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<InvitedViewerQuery, InvitedViewerQueryVariables>) {
@@ -2485,7 +2487,7 @@ export const ListingDocument = gql`
  *   },
  * });
  */
-export function useListingQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ListingQuery, ListingQueryVariables>) {
+export function useListingQuery(baseOptions: ApolloReactHooks.QueryHookOptions<ListingQuery, ListingQueryVariables>) {
         return ApolloReactHooks.useQuery<ListingQuery, ListingQueryVariables>(ListingDocument, baseOptions);
       }
 export function useListingLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ListingQuery, ListingQueryVariables>) {
@@ -2519,7 +2521,7 @@ export const ListingPriceDocument = gql`
  *   },
  * });
  */
-export function useListingPriceQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ListingPriceQuery, ListingPriceQueryVariables>) {
+export function useListingPriceQuery(baseOptions: ApolloReactHooks.QueryHookOptions<ListingPriceQuery, ListingPriceQueryVariables>) {
         return ApolloReactHooks.useQuery<ListingPriceQuery, ListingPriceQueryVariables>(ListingPriceDocument, baseOptions);
       }
 export function useListingPriceLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ListingPriceQuery, ListingPriceQueryVariables>) {
@@ -2552,7 +2554,7 @@ export const ListingsDocument = gql`
  *   },
  * });
  */
-export function useListingsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ListingsQuery, ListingsQueryVariables>) {
+export function useListingsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<ListingsQuery, ListingsQueryVariables>) {
         return ApolloReactHooks.useQuery<ListingsQuery, ListingsQueryVariables>(ListingsDocument, baseOptions);
       }
 export function useListingsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ListingsQuery, ListingsQueryVariables>) {
@@ -2628,7 +2630,7 @@ export const ListingReportsDocument = gql`
  *   },
  * });
  */
-export function useListingReportsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ListingReportsQuery, ListingReportsQueryVariables>) {
+export function useListingReportsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<ListingReportsQuery, ListingReportsQueryVariables>) {
         return ApolloReactHooks.useQuery<ListingReportsQuery, ListingReportsQueryVariables>(ListingReportsDocument, baseOptions);
       }
 export function useListingReportsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ListingReportsQuery, ListingReportsQueryVariables>) {
@@ -2663,7 +2665,7 @@ export const TagsDocument = gql`
  *   },
  * });
  */
-export function useTagsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<TagsQuery, TagsQueryVariables>) {
+export function useTagsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<TagsQuery, TagsQueryVariables>) {
         return ApolloReactHooks.useQuery<TagsQuery, TagsQueryVariables>(TagsDocument, baseOptions);
       }
 export function useTagsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<TagsQuery, TagsQueryVariables>) {
@@ -2733,7 +2735,7 @@ export const SimilarListingsDocument = gql`
  *   },
  * });
  */
-export function useSimilarListingsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<SimilarListingsQuery, SimilarListingsQueryVariables>) {
+export function useSimilarListingsQuery(baseOptions: ApolloReactHooks.QueryHookOptions<SimilarListingsQuery, SimilarListingsQueryVariables>) {
         return ApolloReactHooks.useQuery<SimilarListingsQuery, SimilarListingsQueryVariables>(SimilarListingsDocument, baseOptions);
       }
 export function useSimilarListingsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<SimilarListingsQuery, SimilarListingsQueryVariables>) {
@@ -2858,7 +2860,7 @@ export const PurchaseDocument = gql`
  *   },
  * });
  */
-export function usePurchaseQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<PurchaseQuery, PurchaseQueryVariables>) {
+export function usePurchaseQuery(baseOptions: ApolloReactHooks.QueryHookOptions<PurchaseQuery, PurchaseQueryVariables>) {
         return ApolloReactHooks.useQuery<PurchaseQuery, PurchaseQueryVariables>(PurchaseDocument, baseOptions);
       }
 export function usePurchaseLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<PurchaseQuery, PurchaseQueryVariables>) {
@@ -2894,7 +2896,7 @@ export const SellerDocument = gql`
  *   },
  * });
  */
-export function useSellerQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<SellerQuery, SellerQueryVariables>) {
+export function useSellerQuery(baseOptions: ApolloReactHooks.QueryHookOptions<SellerQuery, SellerQueryVariables>) {
         return ApolloReactHooks.useQuery<SellerQuery, SellerQueryVariables>(SellerDocument, baseOptions);
       }
 export function useSellerLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<SellerQuery, SellerQueryVariables>) {

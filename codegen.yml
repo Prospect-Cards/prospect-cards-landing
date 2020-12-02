@@ -1,11 +1,11 @@
 overwrite: true
 schema: 'http://localhost:3000/v1/schema'
 generates:
-  src/types/graphql.tsx:
+  types/graphql.tsx:
     documents:
-      - src/graphql/queries/**/*.ts
-      - src/graphql/fragments/**/*.ts
-      - src/graphql/mutations/**/*.ts
+      - lib/graphql/queries/**/*.ts
+      - lib/graphql/fragments/**/*.ts
+      - lib/graphql/mutations/**/*.ts
     plugins:
       - typescript
       - typescript-operations
@@ -21,7 +21,7 @@ generates:
   ./graphql.schema.json:
     plugins:
       - introspection
-  src/types/fragmentTypes.ts:
+  types/fragmentTypes.ts:
     overwrite: true
     plugins:
       - fragment-matcher

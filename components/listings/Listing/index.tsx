@@ -1,4 +1,6 @@
-import { useListingQuery } from 'types/graphql'
+import { GetServerSideProps } from 'next'
+import { ListingDocument, useListingQuery } from 'types/graphql'
+import { addApolloState, initializeApollo } from 'lib/apollo'
 import { useRouter } from 'next/router'
 import Dumb from './Listing'
 import ErrorMessage from 'components/common/ErrorMessage'
@@ -24,6 +26,21 @@ const Listing = (): JSX.Element => {
   if (!data || error) return <ErrorMessage />
 
   return <Dumb data={ data } />
+}
+
+export const getServerSideProps: GetServerSideProps = async({ params: { id } }) => {
+  console.log('getting server side props')
+  const apolloClient = initializeApollo()
+  debugger
+
+  await apolloClient.query({
+    query: ListingDocument,
+    variables: { id: +id },
+  })
+
+  return addApolloState(apolloClient, {
+    props: {},
+  })
 }
 
 export default Listing
