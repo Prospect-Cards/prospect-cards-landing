@@ -29,9 +29,7 @@ const Listing = (): JSX.Element => {
 }
 
 export const getServerSideProps: GetServerSideProps = async({ params: { id } }) => {
-  console.log('getting server side props')
   const apolloClient = initializeApollo()
-  debugger
 
   await apolloClient.query({
     query: ListingDocument,
