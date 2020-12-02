@@ -16,8 +16,5 @@ export default makeStyles(
       display: 'flex',
       alignItems: 'center',
     },
-    img: {
-      height: 80,
-    },
   }),
 )

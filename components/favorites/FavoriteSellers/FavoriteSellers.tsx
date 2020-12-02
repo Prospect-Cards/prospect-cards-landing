@@ -2,9 +2,9 @@ import { Button, Paper, Typography } from '@material-ui/core'
 import { FavoriteSellersQuery } from 'types/graphql'
 import { dateFormat } from 'lib/time'
 import { useRouter } from 'next/router'
-import FavoriteSellerToggle from 'components/favorites/FavoriteSellerToggle'
 import ButtonLink from 'components/common/ButtonLink'
-import React from 'react'
+import FavoriteSellerToggle from 'components/favorites/FavoriteSellerToggle'
+import Image from 'components/common/Image'
 import StopPropogation from 'components/common/StopPropogation'
 import useStyles from './styles'
 
@@ -29,14 +29,15 @@ const FavoriteSellers = ({
             key={ seller.id }
             className={ classes.seller }
             onClick={ () => {
-              router.push(`/sellers/${seller.id}`)
+              router.push(`/sellers/${seller.username}`)
             } }
           >
             <div className={ classes.usernameImageContainer }>
-              <img
-                src={ seller.profilePictureUrl }
-                className={ classes.img }
+              <Image
+                url={ seller.profilePictureUrl }
                 alt={ `${seller.username} profile` }
+                height={ 80 }
+                width={ 80 }
               />
               <Typography>{seller.username}</Typography>
             </div>
@@ -45,7 +46,10 @@ const FavoriteSellers = ({
             <Typography>{dateFormat(seller.createdAt)}</Typography>
             <StopPropogation>
               <>
-                <Button component={ ButtonLink } href={ `/sellers/${seller.username}` }>
+                <Button
+                  component={ ButtonLink }
+                  href={ `/sellers/${seller.username}` }
+                >
                   View Seller
                 </Button>
                 <FavoriteSellerToggle

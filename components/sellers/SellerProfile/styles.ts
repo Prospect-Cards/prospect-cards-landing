@@ -1,13 +1,11 @@
-import { StyleRules, Theme, makeStyles } from '@material-ui/core/styles'
+import { StyleRules, makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(
-  (theme: Theme): StyleRules => ({
+  (): StyleRules => ({
     profileOverview: {
       display: 'flex',
       justifyContent: 'space-between',
-    },
-    img: {
-      height: 140,
+      alignItems: 'center',
     },
   }),
 )

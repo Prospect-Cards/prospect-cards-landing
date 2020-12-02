@@ -23,7 +23,7 @@ const PurchaseHistory = ({
       {purchases.length ? (
         purchases.map((purchase) => (
           <Paper key={ purchase.id } className={ classes.purchase }>
-            <Image image={ purchase.listing.images[0] } className={ classes.img } />
+            <Image url={ purchase.listing.images[0].url } className={ classes.img } />
             <Typography>{purchase.listing.title}</Typography>
 
             <Typography>{centsToDollars(purchase.offer.price)}</Typography>

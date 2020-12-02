@@ -1,6 +1,7 @@
 import { Divider, Grid, Typography } from '@material-ui/core'
 import { SellerQuery } from 'types/graphql'
 import FavoriteSellerToggle from 'components/favorites/FavoriteSellerToggle'
+import Image from 'components/common/Image'
 import RatingWithLabel from 'components/common/RatingWithLabel'
 import React from 'react'
 import useStyles from './styles'
@@ -18,10 +19,11 @@ const SellerProfile = ({ data: { seller } }: Props): JSX.Element => {
       <Grid item xs={ 12 }>
         <Divider />
         <Grid item xs={ 12 } className={ classes.profileOverview }>
-          <img
-            src={ seller.profilePictureUrl }
-            className={ classes.img }
+          <Image
+            url={ seller.profilePictureUrl }
             alt={ `${seller.username} profile` }
+            width={ 200 }
+            height={ 200 }
           />
           <Typography>{seller.username}</Typography>
           <Grid item>

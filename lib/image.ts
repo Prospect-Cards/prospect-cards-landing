@@ -2,6 +2,8 @@ interface ImigxOpts {
   fm?: string;
   height?: number;
   width?: number;
+  fit?: 'clamp' | 'clip' | 'crop' | 'facearea' | 'fill' | 'fillmax' | 'max' | 'min' |  'scale'
+  fill?: string;
 }
 
 export const acceptedFormats = [
