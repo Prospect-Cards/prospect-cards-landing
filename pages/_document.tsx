@@ -1,11 +1,19 @@
 import { ServerStyleSheets } from '@material-ui/styles'
-import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document'
 import React from 'react'
 import theme from 'lib/theme'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    debugger
+  static async getInitialProps(
+    ctx: DocumentContext,
+  ): Promise<DocumentInitialProps> {
     // Render app and page and get the context of the page with collected side effects.
     const sheets = new ServerStyleSheets()
     const originalRenderPage = ctx.renderPage
@@ -36,7 +44,7 @@ class MyDocument extends Document {
           <meta property='og:type' content='website' />
           <meta
             property='og:description'
-            content='Sports Card Marketplace by Collectors for Collectors'
+            content='Prospect Cards - Sports Card Marketplace'
           />
           <link
             rel='stylesheet'
