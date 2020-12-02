@@ -31,7 +31,7 @@ const Home = (): JSX.Element => {
       <Grid item xs={ 12 }>
         <ReactiveBase
           app='listings'
-          url={ process.env.API_URI }
+          url={ process.env.NEXT_PUBLIC_API_URI }
           headers={ {
             authorization: token || '',
           } }

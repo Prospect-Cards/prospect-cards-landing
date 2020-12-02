@@ -19,7 +19,7 @@ type ServerErrorOrUndef = ServerError | undefined;
 const isSsr = typeof window === 'undefined'
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
-const uri = `${process.env.API_URI}/v1`
+const uri = `${process.env.NEXT_PUBLIC_API_URI}/v1`
 let apolloClient
 
 const httpLink = createUploadLink({
