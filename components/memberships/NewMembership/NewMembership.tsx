@@ -1,5 +1,5 @@
 import { Button } from '@material-ui/core'
-import Link  from 'components/common/Link'
+import ButtonLink  from 'components/common/ButtonLink'
 import { ProductsQuery } from 'types/graphql'
 import { centsToDollars } from 'lib/money'
 import React from 'react'
@@ -16,7 +16,7 @@ const NewMembership = ({ data }: Props): JSX.Element => {
           return (
             <Button
               key={ prod.token }
-              component={ Link }
+              component={ ButtonLink }
               href={ `/account/add_payment/${prod.token}` }
             >
               {centsToDollars(prod.price)} per {prod.term}

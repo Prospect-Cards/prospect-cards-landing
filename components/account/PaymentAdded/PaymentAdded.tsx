@@ -1,5 +1,5 @@
 import { Button, Typography } from '@material-ui/core'
-import Link  from 'components/common/Link'
+import ButtonLink  from 'components/common/ButtonLink'
 import React from 'react'
 
 const PaymentAdded = (): JSX.Element => {
@@ -8,7 +8,7 @@ const PaymentAdded = (): JSX.Element => {
       <Typography>
         All set! Click here to check out our newest listings!
       </Typography>
-      <Button component={ Link } href='/'>
+      <Button component={ ButtonLink } href='/'>
         View Listings
       </Button>
     </div>

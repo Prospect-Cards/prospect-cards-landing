@@ -2,7 +2,7 @@ import { Button } from '@material-ui/core'
 import { toast } from 'react-toastify'
 import { useRouter } from 'next/router'
 import AuthScreen from 'components/common/AuthScreen'
-import Link from 'components/common/Link'
+import ButtonLink from 'components/common/ButtonLink'
 import LoadingButton from 'components/common/LoadingButton'
 import React, { SyntheticEvent, useState } from 'react'
 import TextField from '@material-ui/core/TextField'
@@ -103,7 +103,7 @@ const Login = ({ refresh }: Props): JSX.Element => {
         fullWidth
         variant='outlined'
         href='/forgot-password'
-        component={ Link }
+        component={ ButtonLink }
       >
         Forgot Password?
       </Button>

@@ -1,5 +1,5 @@
 import { Button, Typography } from '@material-ui/core'
-import Link  from 'components/common/Link'
+import ButtonLink  from 'components/common/ButtonLink'
 import { StripeAccountQuery } from 'types/graphql'
 import React from 'react'
 
@@ -14,7 +14,7 @@ const StripeAccountVerification = ({ data }: Props): JSX.Element => {
         <Typography>
           Looks like you're all set! Let's get to selling!
         </Typography>
-        <Button component={ Link } href='/listings/new'>
+        <Button component={ ButtonLink } href='/listings/new'>
           Start Selling
         </Button>
       </div>
@@ -26,7 +26,7 @@ const StripeAccountVerification = ({ data }: Props): JSX.Element => {
           Looks like something's missing... Click below to continue setting up
           payment.
         </Typography>
-        <Button component={ Link } href='/account/sell'>
+        <Button component={ ButtonLink } href='/account/sell'>
           Continue with Payments
         </Button>
       </div>

@@ -3,7 +3,7 @@ import { FavoriteSellersQuery } from 'types/graphql'
 import { dateFormat } from 'lib/time'
 import { useRouter } from 'next/router'
 import FavoriteSellerToggle from 'components/favorites/FavoriteSellerToggle'
-import Link from 'components/common/Link'
+import ButtonLink from 'components/common/ButtonLink'
 import React from 'react'
 import StopPropogation from 'components/common/StopPropogation'
 import useStyles from './styles'
@@ -45,7 +45,7 @@ const FavoriteSellers = ({
             <Typography>{dateFormat(seller.createdAt)}</Typography>
             <StopPropogation>
               <>
-                <Button component={ Link } href={ `/sellers/${seller.username}` }>
+                <Button component={ ButtonLink } href={ `/sellers/${seller.username}` }>
                   View Seller
                 </Button>
                 <FavoriteSellerToggle

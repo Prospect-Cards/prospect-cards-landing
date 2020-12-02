@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import AccountCircle from '@material-ui/icons/AccountCircle'
-import Link from 'components/common/Link'
+import ButtonLink from 'components/common/ButtonLink'
 import LogoutButton from 'components/common/LogoutButton'
 import MoreIcon from '@material-ui/icons/MoreVert'
 import PrivateComponent from 'components/PrivateComponent'
@@ -18,6 +18,7 @@ import React from 'react'
 import RoundButton from 'components/common/RoundButton'
 import useStyles from './styles'
 // import CategoryLink from 'components/common/CategoryLink'
+import {useRouter} from 'next/router'
 import NoticesMenu from 'components/NoticesMenu'
 import PlusIcon from '../../assets/svg/PlusIcon'
 
@@ -28,6 +29,7 @@ interface Props {
 
 const NavBar = ({ data, loading }: Props): JSX.Element => {
   const classes = useStyles()
+  const router = useRouter()
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const [
     mobileMoreAnchorEl,
@@ -49,9 +51,10 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
     setMobileMoreAnchorEl(null)
   }
 
-  const handleMenuClose = () => {
+  const handleMenuItemClick = (route: string) => () => {
     setAnchorEl(null)
     handleMobileMenuClose()
+    router.push(route)
   }
 
   const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -67,58 +70,40 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
       keepMounted
       transformOrigin={ { vertical: 'top', horizontal: 'right' } }
       open={ isMenuOpen }
-      onClose={ handleMenuClose }
+      onClose={ handleMenuItemClick }
     >
-      <MenuItem
-        onClick={ handleMenuClose }
-        component={ Link }
-        href='/profile/details'
-      >
+      <MenuItem onClick={ handleMenuItemClick('/profile/details') } >
         Profile
       </MenuItem>
-      <MenuItem onClick={ handleMenuClose } component={ Link } href='/favorites'>
+      <MenuItem onClick={ handleMenuItemClick('/favorites') } >
         Favorites
       </MenuItem>
       {isSeller && (
-        <MenuItem onClick={ handleMenuClose } component={ Link } href='/items'>
+        <MenuItem onClick={ handleMenuItemClick('/items') } >
           My Listings
         </MenuItem>
       )}
 
       <Divider />
       {!hasPaymentMethod && (
-        <MenuItem
-          onClick={ handleMenuClose }
-          component={ Link }
-          href='profile/payment'
-        >
+        <MenuItem onClick={ handleMenuItemClick('/profile/payment') } >
           Add Payment Method
         </MenuItem>
       )}
 
       {isSeller ? (
-        <MenuItem
-          onClick={ handleMenuClose }
-          component={ Link }
-          href='listings/new'
-        >
+        <MenuItem onClick={ handleMenuItemClick('/listings/new') } >
           Create a Listing
         </MenuItem>
       ) : (
-        <MenuItem
-          onClick={ handleMenuClose }
-          component={ Link }
-          href='account/sell'
-        >
+        <MenuItem onClick={ handleMenuItemClick('/account/sell') } >
           Start Selling
         </MenuItem>
       )}
       {/*{!hasSubscription && (*/}
       {/*  <PrivateComponent>*/}
       {/*    <MenuItem*/}
-      {/*      onClick={ handleMenuClose }*/}
-      {/*      component={ Link }*/}
-      {/*      href='membership/new'*/}
+      {/*      onClick={ handleMenuItemClick('/membership/new') }*/}
       {/*    >*/}
       {/*      Become a Member*/}
       {/*    </MenuItem>*/}
@@ -167,7 +152,7 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
       <AppBar position='fixed'>
         <Toolbar>
           <Typography
-            component={ Link }
+            component={ ButtonLink }
             href='/'
             className={ classes.title }
             variant='h6'
@@ -181,7 +166,7 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
               <RoundButton
                 variant='outlined'
                 color='secondary'
-                component={ Link }
+                component={ ButtonLink }
                 href='/listings/new'
                 size='small'
                 startIcon={ <PlusIcon /> }
@@ -193,12 +178,12 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
             )}
 
             <PrivateComponent>
-              <Button component={ Link } href='/' color='secondary'>
+              <Button component={ ButtonLink } href='/' color='secondary'>
                 View Listings
               </Button>
             </PrivateComponent>
             <PrivateComponent>
-              <Button component={ Link } href='/items' color='secondary'>
+              <Button component={ ButtonLink } href='/items' color='secondary'>
                 My Offers
               </Button>
             </PrivateComponent>
@@ -217,7 +202,7 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
                     <div className={ classes.grow } />
                     <div>
                       <Button
-                        component={ Link }
+                        component={ ButtonLink }
                         variant='outlined'
                         color='secondary'
                         href='/register'
@@ -225,7 +210,7 @@ const NavBar = ({ data, loading }: Props): JSX.Element => {
                         Register
                       </Button>
                       <Button
-                        component={ Link }
+                        component={ ButtonLink }
                         variant='contained'
                         color='primary'
                         href='/login'

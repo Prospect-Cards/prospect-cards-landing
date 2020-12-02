@@ -7,7 +7,7 @@ import {
   Grid,
   Typography,
 } from '@material-ui/core'
-import Link  from 'components/common/Link'
+import ButtonLink  from 'components/common/ButtonLink'
 import { ListingQuery, ListingStatusEnum } from 'types/graphql'
 import AcceptListingReportsButton from 'components/admin/AcceptListingReportsButton'
 import AdminComponent from 'components/AdminComponent'
@@ -69,7 +69,7 @@ const Listing = ({ data: { listing } }: Props): JSX.Element => {
                     <div className={ classes.offerButtonsContainer }>
                       <PrivateComponent
                         loggedOut={
-                          <Button component={ Link } href='/login'>
+                          <Button component={ ButtonLink } href='/login'>
                             Login to Purchase
                           </Button>
                         }

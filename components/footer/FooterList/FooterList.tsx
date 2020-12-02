@@ -1,5 +1,5 @@
 import { List, ListItem } from '@material-ui/core'
-import Link from 'components/common/Link'
+import ButtonLink from 'components/common/ButtonLink'
 import React from 'react'
 import useStyles from './styles'
 
@@ -19,9 +19,9 @@ const FooterList = ({ items }: Props): JSX.Element => {
     <List>
       {items.map((item) => (
         <ListItem className={ classes.listItem } key={ item.label }>
-          <Link className={ classes.link } href={ item.path }>
+          <ButtonLink className={ classes.link } href={ item.path }>
             {item.label}
-          </Link>
+          </ButtonLink>
         </ListItem>
       ))}
     </List>

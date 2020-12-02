@@ -6,7 +6,7 @@ interface Props extends LinkProps {
   className: string;
 }
 
-const Link = React.forwardRef(
+const ButtonLink = React.forwardRef(
   ({ className, href, as, children, prefetch }: Props, ref) => (
     <NextLink href={ href } as={ as } prefetch={ prefetch } >
       <a className={ className }>{children}</a>
@@ -14,4 +14,4 @@ const Link = React.forwardRef(
   ),
 )
 
-export default Link
+export default ButtonLink
