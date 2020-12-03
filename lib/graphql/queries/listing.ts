@@ -53,8 +53,8 @@ gql`
 `
 
 gql`
-  query tags($context: TagTypesEnum!, $name: String) {
-    tags(context: $context, name: $name) {
+  query tags($context: TagTypesEnum!, $name: String, $includeSeeds: Boolean) {
+    tags(context: $context, name: $name, includeSeeds: $includeSeeds) {
       id
       name
     }
