@@ -1,6 +1,6 @@
-import { imigxUrl } from 'lib/image'
+import { imigxUrl, supportsWebp } from 'lib/image'
 import NImage from 'next/image'
-import React from 'react'
+import React, {useMemo} from 'react'
 
 interface Props {
   url: string;
@@ -10,19 +10,6 @@ interface Props {
   className?: string;
 }
 
-// TODO: This doesn't work with Firefox, which does support Webp
-function supportsWebp() {
-  const elem = document.createElement('canvas')
-
-  if (!!(elem.getContext && elem.getContext('2d'))) {
-    // was able or not to get WebP representation
-    return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0
-  } else {
-    // very old browser like IE 8, canvas not supported
-    return false
-  }
-}
-
 const Image = ({
   url,
   alt,
@@ -30,12 +17,13 @@ const Image = ({
   height = 240,
   width = height,
 }: Props): JSX.Element => {
+  const useWebP = useMemo(supportsWebp, [])
   const src = imigxUrl(url, {
     height,
     width,
     fit: 'fill',
     fill: 'solid',
-    fm: supportsWebp() ? 'webp' : 'png',
+    fm: useWebP ? 'webp' : 'png',
   })
 
   return (
