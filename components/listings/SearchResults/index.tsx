@@ -10,9 +10,10 @@ interface Props {
 const SearchResults = ({ listingIds }: Props): JSX.Element => {
   const { data, loading, error } = useListingsQuery({
     variables: { listingIds },
+    fetchPolicy: 'network-only',
   })
 
-  if (loading && !data) return <ListingSkeletons />
+  if (!data) return <ListingSkeletons />
   if (!data || error) return <ErrorMessage />
 
   return <Dumb data={ data } loading={ loading } />
