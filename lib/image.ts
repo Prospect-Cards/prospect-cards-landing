@@ -4,6 +4,7 @@ interface ImigxOpts {
   width?: number;
   fit?: 'clamp' | 'clip' | 'crop' | 'facearea' | 'fill' | 'fillmax' | 'max' | 'min' |  'scale'
   fill?: string;
+  dpr?: number;
 }
 
 export const acceptedFormats = [

@@ -21,14 +21,14 @@ const Carousel = ({ listing, height }: Props): JSX.Element => {
         centerMode={ listing.images.length > 1 }
         showIndicators={ listing.images.length > 1 }
       >
-        {listing.images.map((image, ind: number) => {
+        {listing.images.map((image) => {
           return (
             <Image
               key={ image.id }
               url={ image.url }
               height={ height }
               width={ Math.floor(height * 0.7) }
-              alt={ `${listing.player} No. ${ind}` }
+              alt={ listing.title }
               className={ classes.img }
             />
           )

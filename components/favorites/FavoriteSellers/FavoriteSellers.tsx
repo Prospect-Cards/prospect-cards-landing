@@ -35,7 +35,7 @@ const FavoriteSellers = ({
             <div className={ classes.usernameImageContainer }>
               <Image
                 url={ seller.profilePictureUrl }
-                alt={ `${seller.username} profile` }
+                alt={ seller.username }
                 height={ 80 }
                 width={ 80 }
               />

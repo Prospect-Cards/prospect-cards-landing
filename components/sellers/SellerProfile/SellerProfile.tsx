@@ -21,7 +21,7 @@ const SellerProfile = ({ data: { seller } }: Props): JSX.Element => {
         <Grid item xs={ 12 } className={ classes.profileOverview }>
           <Image
             url={ seller.profilePictureUrl }
-            alt={ `${seller.username} profile` }
+            alt={ seller.username }
             width={ 200 }
             height={ 200 }
           />

@@ -34,7 +34,11 @@ const FavoriteListings = ({
               router.push(`/listings/${listing.id}`)
             } }
           >
-            <Image url={ listing.images[0].url } className={ classes.img } />
+            <Image
+              url={ listing.images[0].url }
+              alt={ listing.title }
+              className={ classes.img }
+            />
             <Typography>{listing.title}</Typography>
 
             <Typography>{centsToDollars(listing.price)}</Typography>
