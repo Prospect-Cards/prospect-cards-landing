@@ -21,6 +21,7 @@ class ErrorBoundary extends Component {
   componentDidCatch(error: Error, info: ErrorInfo): void {
     // Display fallback UI
     this.setState({ hasError: true })
+    console.log(process.env.NODE_ENV)
     if (process.env.NODE_ENV === 'development') {
       console.error('ERROR:', error, info)
     } else {

@@ -1,13 +1,17 @@
+import {useRouter} from 'next/router'
+
 export interface Props {
   isAuthenticated: boolean;
   children: JSX.Element;
 }
 
 const PrivateRoute = ({ children, isAuthenticated }: Props): JSX.Element => {
+  const router = useRouter()
   if (isAuthenticated) {
     return children
   } else if (typeof window !== 'undefined') {
-    window.location.href = '/'
+    router.push('/')
+    return null
   }
 }
 

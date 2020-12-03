@@ -1,14 +1,16 @@
 import { useApolloClient } from '@apollo/client'
+import {useRouter} from 'next/router'
 
 const useLogout = (): VoidFunction => {
   const client = useApolloClient()
+  const router = useRouter()
 
   return () => {
     if (typeof window === 'undefined') return
 
     localStorage.removeItem('prospect-cards-token')
     client.clearStore()
-    window.location.href = '/login'
+    router.push('/login')
   }
 }
 
