@@ -357,7 +357,7 @@ export type QuerySellerArgs = {
 export type QueryTagsArgs = {
   context: TagTypesEnum;
   name?: Maybe<Scalars['String']>;
-  includeSeeds?: Maybe<Scalars['Boolean']>;
+  minimum?: Maybe<Scalars['Int']>;
 };
 
 
@@ -1187,7 +1187,7 @@ export type ListingReportsQuery = (
 export type TagsQueryVariables = Exact<{
   context: TagTypesEnum;
   name?: Maybe<Scalars['String']>;
-  includeSeeds?: Maybe<Scalars['Boolean']>;
+  minimum?: Maybe<Scalars['Int']>;
 }>;
 
 
@@ -2642,8 +2642,8 @@ export type ListingReportsQueryHookResult = ReturnType<typeof useListingReportsQ
 export type ListingReportsLazyQueryHookResult = ReturnType<typeof useListingReportsLazyQuery>;
 export type ListingReportsQueryResult = ApolloReactCommon.QueryResult<ListingReportsQuery, ListingReportsQueryVariables>;
 export const TagsDocument = gql`
-    query tags($context: TagTypesEnum!, $name: String, $includeSeeds: Boolean) {
-  tags(context: $context, name: $name, includeSeeds: $includeSeeds) {
+    query tags($context: TagTypesEnum!, $name: String, $minimum: Int) {
+  tags(context: $context, name: $name, minimum: $minimum) {
     id
     name
   }
@@ -2664,7 +2664,7 @@ export const TagsDocument = gql`
  *   variables: {
  *      context: // value for 'context'
  *      name: // value for 'name'
- *      includeSeeds: // value for 'includeSeeds'
+ *      minimum: // value for 'minimum'
  *   },
  * });
  */

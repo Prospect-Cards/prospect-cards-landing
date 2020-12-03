@@ -10,7 +10,7 @@ interface Props
 
 const CheckboxSearch = ({ tagType, ...props }: Props): JSX.Element => {
   const { data, refetch, loading } = useTagsQuery({
-    variables: { context: tagType, includeSeeds: false },
+    variables: { context: tagType, minimum: 1 },
     notifyOnNetworkStatusChange: true,
   })
 
