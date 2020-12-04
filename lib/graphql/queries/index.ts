@@ -6,31 +6,31 @@ gql`
       id
       admin
     }
-    playerTags: tags(context: player) {
+    playerTags: tags(context: player, minimum: 1) {
       id
       name
     }
-    categoryTags: tags(context: category) {
+    categoryTags: tags(context: category, minimum: 1) {
       id
       name
     }
-    productTags: tags(context: product_type) {
+    productTags: tags(context: product_type, minimum: 1) {
       id
       name
     }
-    setTags: tags(context: set_type) {
+    setTags: tags(context: set_type, minimum: 1) {
       id
       name
     }
-    manufacturerTags: tags(context: manufacturer) {
+    manufacturerTags: tags(context: manufacturer, minimum: 1) {
       id
       name
     }
-    graderTags: tags(context: grader) {
+    graderTags: tags(context: grader, minimum: 1) {
       id
       name
     }
-    parallelTags: tags(context: parallel) {
+    parallelTags: tags(context: parallel, minimum: 1) {
       id
       name
     }
