@@ -26,6 +26,7 @@ const NewListingTagField = ({
   const hookResult = useTagsLazyQuery({
     variables: {
       context,
+      minimum: 5,
     },
   })
 
