@@ -4,6 +4,7 @@ import {
   JoinMailingListMutationFn,
   JoinMailingListMutationVariables,
 } from 'types/graphql'
+import { Mixpanel } from 'lib/mixpanel'
 import FormTextField from 'components/common/formFields/FormTextField'
 import LoadingButton from 'components/common/LoadingButton'
 import React from 'react'
@@ -33,6 +34,7 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
           submit({ variables }).then((res) => {
             if (res.data.joinMailingList.success) {
               resetForm()
+              Mixpanel.track('Joined Mailing List')
             }
           })
         } }

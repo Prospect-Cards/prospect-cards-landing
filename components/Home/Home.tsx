@@ -1,8 +1,8 @@
 import { Grid, Typography } from '@material-ui/core'
+import { Mixpanel } from 'lib/mixpanel'
 import EmailForm from 'components/EmailForm'
 import Imgix, { Background } from 'react-imgix'
 import React, { useEffect } from 'react'
-import { Mixpanel } from 'lib/mixpanel'
 import useStyles from './styles'
 
 const Home = (): JSX.Element => {
