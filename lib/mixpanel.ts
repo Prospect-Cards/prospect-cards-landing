@@ -1,5 +1,7 @@
 import mixpanel from 'mixpanel-browser'
-mixpanel.init('012ef52d632ba81ced1f9db7dcd2f414')
+if (typeof window !== 'undefined') {
+  mixpanel.init('5c522a43f8bef8ad588b3ad75324006d')
+}
 
 const env_check = process.env.NODE_ENV === 'production'
 
