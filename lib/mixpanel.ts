@@ -13,6 +13,7 @@ const actions = {
     if (env_check) mixpanel.alias(id)
   },
   track: (name, props) => {
+    console.log('Tracking', name)
     if (env_check) mixpanel.track(name, props)
   },
   people: {
