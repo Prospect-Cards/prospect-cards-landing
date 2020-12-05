@@ -4,6 +4,7 @@ export default makeStyles(
   ({ spacing }: Theme): StyleRules => ({
     container: {
       minHeight: '100vh',
+      paddingBottom: 100,
     },
     other: {
       flexGrow: 1,
@@ -12,7 +13,7 @@ export default makeStyles(
       height: '100%',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-around',
+      justifyContent: 'space-between',
       padding: spacing(5),
     },
     rightPane: {
