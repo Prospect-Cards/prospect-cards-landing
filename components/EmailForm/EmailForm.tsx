@@ -34,7 +34,7 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
           submit({ variables }).then((res) => {
             if (res.data.joinMailingList.success) {
               resetForm()
-              Mixpanel.track('Joined Mailing List')
+              Mixpanel.track('Joined Mailing List', { email: variables.email })
             }
           })
         } }
