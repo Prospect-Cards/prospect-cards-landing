@@ -1,11 +1,16 @@
 import { Grid, Typography } from '@material-ui/core'
 import EmailForm from 'components/EmailForm'
 import Imgix, { Background } from 'react-imgix'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Mixpanel } from 'lib/mixpanel'
 import useStyles from './styles'
 
 const Home = (): JSX.Element => {
   const classes = useStyles()
+  
+  useEffect(() => {
+    Mixpanel.track('Landing Page Visit', {})
+  }, [Mixpanel])
 
   return (
     <Background
