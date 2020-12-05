@@ -1,17 +1,14 @@
-import { StyleRules, Theme, makeStyles } from '@material-ui/core/styles'
+import { StyleRules, makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(
-  (theme: Theme): StyleRules => ({
-    root: {
-      display: 'flex',
-    },
-    appBarSpacer: theme.mixins.toolbar,
+  (): StyleRules => ({
     content: {
-      paddingTop: 10,
       flexGrow: 1,
       minHeight: '100vh',
       backgroundColor: '#f6f8fa',
-      paddingBottom: 100,
+    },
+    container: {
+      padding: 0,
     },
   }),
 )

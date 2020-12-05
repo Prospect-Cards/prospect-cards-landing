@@ -2,19 +2,26 @@ import { StyleRules, Theme, makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(
   ({ spacing }: Theme): StyleRules => ({
-    resultsWrapper: {
+    container: {
+      minHeight: '100vh',
+    },
+    other: {
+      flexGrow: 1,
+    },
+    content: {
+      height: '100%',
       display: 'flex',
-      justifyContent: 'left',
-      flexWrap: 'wrap',
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      padding: spacing(5),
     },
-    searchBox: {
-      borderRadius: 20,
-      height: 40,
-      marginBottom: spacing(),
-    },
-    filterPaper: {
-      padding: spacing(),
-      marginBottom: spacing(),
+    rightPane: {
+      width: 270,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      borderLeft: '1px solid #333',
+      paddingTop: 75,
     },
   }),
 )
