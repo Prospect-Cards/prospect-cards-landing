@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core'
+import {Grid, Hidden, Typography} from '@material-ui/core'
 import { Mixpanel } from 'lib/mixpanel'
 import EmailForm from 'components/EmailForm'
 import Imgix from 'react-imgix'
@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
             width={ 250 }
           />
           <div>
-            <Typography variant='h1'>COMING SOON.</Typography>
+            <Typography variant='h1' className={ classes.comingSoon }>COMING SOON.</Typography>
             <Typography>
               Sign up to be notified when the site launches
             </Typography>
@@ -29,13 +29,15 @@ const Home = (): JSX.Element => {
           <EmailForm />
         </Grid>
       </Grid>
-      <Grid item className={ classes.rightPane }>
-        <Imgix
-          src='https://prospect-cards-assets.imgix.net/logo-badge.png'
-          width={ 65 }
-        />
-        Buy Sell Track
-      </Grid>
+      <Hidden smDown>
+        <Grid item className={ classes.rightPane }>
+          <Imgix
+            src='https://prospect-cards-assets.imgix.net/logo-badge.png'
+            width={ 65 }
+          />
+          Buy Sell Track
+        </Grid>
+      </Hidden>
     </Grid>
   )
 }

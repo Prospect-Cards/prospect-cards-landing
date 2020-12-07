@@ -46,6 +46,10 @@ class MyDocument extends Document {
             property='og:description'
             content='Prospect Cards - Sports Card Marketplace'
           />
+          <meta
+            name='viewport'
+            content='minimum-scale=1, initial-scale=1, width=device-width'
+          />
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap'

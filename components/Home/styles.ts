@@ -9,6 +9,9 @@ export default makeStyles(
     other: {
       flexGrow: 1,
     },
+    comingSoon: {
+      color: '#9CA450',
+    },
     content: {
       height: '100%',
       display: 'flex',
@@ -21,7 +24,7 @@ export default makeStyles(
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      borderLeft: '1px solid #333',
+      borderLeft: '1px solid rgba(175,175,175,.2)',
       paddingTop: 75,
     },
   }),
