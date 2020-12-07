@@ -1,6 +1,5 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import 'styles/carousel.css'
-import 'styles/reactiveSearch.css'
+import 'styles/globals.css'
 import { ApolloProvider } from '@apollo/client'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { useApollo } from 'lib/apollo'
@@ -39,7 +38,9 @@ const App = (props: AppProps): JSX.Element => {
             />
           </Head>
           <ApolloProvider client={ apolloClient }>
-            <AppContainer { ...props } />
+            <div className='bg'>
+              <AppContainer { ...props } />
+            </div>
           </ApolloProvider>
         </ErrorBoundary>
       </HttpsRedirect>

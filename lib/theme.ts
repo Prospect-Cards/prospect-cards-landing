@@ -6,12 +6,24 @@ import * as type from '@material-ui/lab/themeAugmentation'
 import { responsiveFontSizes } from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
+  overrides: {
+    MuiInput: {
+      underline: {
+        '&::before': {
+          borderColor: '#EFEFEF',
+        },
+      },
+    },
+  },
   palette: {
-    primary:{
-      main: '#fff',
+    primary: {
+      main: '#EFEFEF',
+    },
+    error: {
+      main: '#EFEFEF',
     },
     text: {
-      primary: '#fff',
+      primary: '#EFEFEF',
     },
   },
   typography: {

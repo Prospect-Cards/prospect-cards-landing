@@ -32,6 +32,8 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
       <Formik<JoinMailingListMutationVariables>
         initialValues={ initialValues }
         validationSchema={ FormSchema }
+        validateOnChange={ false }
+        validateOnBlur={ false }
         onSubmit={ async(variables, { resetForm }) => {
           submit({ variables }).then((res) => {
             if (res.data.joinMailingList.success) {
