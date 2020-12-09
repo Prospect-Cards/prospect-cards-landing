@@ -18,7 +18,7 @@ interface Props {
 const FormSchema = Yup.object().shape({
   email: Yup.string()
     .email('Please enter a valid email')
-    .required('Email address please!'),
+    .required('Email address please'),
 })
 
 const initialValues: JoinMailingListMutationVariables = {

@@ -15,7 +15,7 @@ const FormTextField = (props: Props): JSX.Element => {
     <TextField
       variant='outlined'
       error={ hasError }
-      helperText={ hasError && meta.error }
+      helperText={ (hasError && meta.error) || ' ' }
       id={ props.name }
       { ...field }
       { ...props }
