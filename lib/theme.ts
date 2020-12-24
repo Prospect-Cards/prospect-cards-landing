@@ -13,6 +13,12 @@ const theme = createMuiTheme({
           borderColor: '#EFEFEF',
         },
       },
+      input: {
+        fontSize: 20,
+        fontFamily: 'acumin-pro, sans-serif;',
+        color: 'white',
+        width: '50%',
+      },
     },
   },
   palette: {
@@ -27,8 +33,22 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    fontFamily: 'acumin-pro, sans-serif;',
     h1: {
-      fontSize: '4rem',
+      fontFamily: 'acumin-pro-condensed, sans-serif;',
+      fontWeight: 900,
+      fontSize: '7rem',
+      color: 'white',
+    },
+    body1: {
+      fontSize: '1rem',
+      fontWeight: 400,
+    },
+    button: {
+      fontFamily: 'acumin-pro-condensed, sans-serif;',
+      fontSize: '1.125rem',
+      fontWeight: 700,
+      letterSpacing: '0.06rem',
     },
   },
 })

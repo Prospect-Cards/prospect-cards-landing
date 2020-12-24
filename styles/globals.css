@@ -28,3 +28,9 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white !important;
+  opacity: 1 !important; /* Firefox */
+}

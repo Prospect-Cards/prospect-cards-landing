@@ -50,10 +50,7 @@ class MyDocument extends Document {
             name='viewport'
             content='minimum-scale=1, initial-scale=1, width=device-width'
           />
-          <link
-            rel='stylesheet'
-            href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap'
-          />
+          <link rel='stylesheet' href='https://use.typekit.net/mhc5mbf.css' />
         </Head>
         <body>
           <Main />

@@ -28,7 +28,7 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
   const classes = useStyles()
 
   return (
-    <div>
+    <div className={ classes.root }>
       <Formik<JoinMailingListMutationVariables>
         initialValues={ initialValues }
         validationSchema={ FormSchema }
@@ -48,11 +48,12 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
           return (
             <Form>
               <FormTextField
-                className={ classes.container }
                 placeholder='Enter Email Address'
                 variant='standard'
                 name='email'
+                fullWidth
                 InputProps={ {
+                  className: classes.input,
                   endAdornment: (
                     <LoadingButton
                       variant='contained'

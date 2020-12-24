@@ -1,7 +1,9 @@
-import {Grid, Hidden, Typography} from '@material-ui/core'
+import { Grid, Hidden, Typography } from '@material-ui/core'
 import { Mixpanel } from 'lib/mixpanel'
+import Badge from 'assets/svg/Badge'
+import BuySellTrack from 'assets/svg/BuySellTrack'
 import EmailForm from 'components/EmailForm'
-import Imgix from 'react-imgix'
+import Logo from 'assets/svg/Logo'
 import React, { useEffect } from 'react'
 import useStyles from './styles'
 
@@ -14,30 +16,23 @@ const Home = (): JSX.Element => {
 
   return (
     <Grid container className={ classes.container }>
-      <Grid item className={ classes.other }>
-        <Grid item className={ classes.content }>
-          <Imgix
-            src='https://prospect-cards-assets.imgix.net/logo.png'
-            width={ 250 }
-          />
-          <div>
-            <Typography variant='h1' className={ classes.comingSoon }>COMING SOON.</Typography>
-            <Typography>
-              Sign up to be notified when the site launches
-            </Typography>
-          </div>
-          <EmailForm />
-        </Grid>
-      </Grid>
-      <Hidden smDown>
-        <Grid item className={ classes.rightPane }>
-          <Imgix
-            src='https://prospect-cards-assets.imgix.net/logo-badge.png'
-            width={ 65 }
-          />
-          Buy Sell Track
-        </Grid>
-      </Hidden>
+      <div className={ classes.buySellTrack }>
+        <BuySellTrack />
+      </div>
+      <div className={ classes.content }>
+        <Logo />
+        <div className={ classes.copy }>
+          <Typography variant='h1'>COMING SOON.</Typography>
+          <Typography variant='body1'>
+            Sign up to be notified when the site launches
+          </Typography>
+        </div>
+        <EmailForm />
+        <Badge />
+      </div>
+      <div className={ classes.buySellTrack }>
+        <BuySellTrack />
+      </div>
     </Grid>
   )
 }

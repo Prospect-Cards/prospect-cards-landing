@@ -4,28 +4,26 @@ export default makeStyles(
   ({ spacing }: Theme): StyleRules => ({
     container: {
       minHeight: '100vh',
-      paddingBottom: 100,
-    },
-    other: {
-      flexGrow: 1,
-    },
-    comingSoon: {
-      color: '#9CA450',
+      display: 'flex',
+      justifyContent: 'space-between',
     },
     content: {
-      height: '100%',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      padding: spacing(5),
+      alignItems: 'center',
+      paddingTop: spacing(10),
+      paddingBottom: spacing(10),
     },
-    rightPane: {
-      width: 270,
+    copy: {
+      textAlign: 'center',
+    },
+    buySellTrack: {
       display: 'flex',
       flexDirection: 'column',
+      width: 130,
+      justifyContent: 'center',
       alignItems: 'center',
-      borderLeft: '1px solid rgba(175,175,175,.2)',
-      paddingTop: 75,
     },
   }),
 )
