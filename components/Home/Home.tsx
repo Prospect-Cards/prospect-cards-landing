@@ -16,9 +16,11 @@ const Home = (): JSX.Element => {
 
   return (
     <Grid container className={ classes.container }>
-      <div className={ classes.buySellTrack }>
-        <BuySellTrack />
-      </div>
+      <Hidden smDown>
+        <div className={ classes.buySellTrack }>
+          <BuySellTrack />
+        </div>
+      </Hidden>
       <div className={ classes.content }>
         <Logo />
         <div className={ classes.copy }>
@@ -30,9 +32,11 @@ const Home = (): JSX.Element => {
         <EmailForm />
         <Badge />
       </div>
-      <div className={ classes.buySellTrack }>
-        <BuySellTrack />
-      </div>
+      <Hidden xsDown>
+        <div className={ classes.buySellTrack }>
+          <BuySellTrack />
+        </div>
+      </Hidden>
     </Grid>
   )
 }

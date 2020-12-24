@@ -6,6 +6,8 @@ export default makeStyles(
       minHeight: '100vh',
       display: 'flex',
       justifyContent: 'space-between',
+      paddingLeft: 60,
+      paddingRight: 60,
     },
     content: {
       display: 'flex',
@@ -21,7 +23,6 @@ export default makeStyles(
     buySellTrack: {
       display: 'flex',
       flexDirection: 'column',
-      width: 130,
       justifyContent: 'center',
       alignItems: 'center',
     },

@@ -1,8 +1,8 @@
-import { StyleRules, Theme, makeStyles } from '@material-ui/core/styles'
+import { StyleRules, makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(
-  (theme: Theme): StyleRules => ({
-    root: { width: '100%' },
+  (): StyleRules => ({
+    root: { width: '100%', minWidth: 400 },
     input: {
     },
     submitBtn: {
