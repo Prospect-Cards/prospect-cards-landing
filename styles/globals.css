@@ -16,6 +16,23 @@ a {
   box-sizing: border-box;
 }
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
 .bg {
   /* The image used */
   background-image: url("https://prospect-cards-assets.imgix.net/landing/Baseball_2.jpg?auto=format&blend-color=3b3d42&h=1000");
@@ -27,6 +44,11 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  -moz-transition: background 1.5s linear;
+  -o-transition: background 1.5s linear;
+  -ms-transition: background 1.5s linear;
+  transition: background 1.5s linear;
 }
 
 
