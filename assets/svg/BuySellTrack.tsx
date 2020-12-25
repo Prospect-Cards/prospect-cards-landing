@@ -1,13 +1,11 @@
 import React from 'react'
 
 const BuySellTrack = (): JSX.Element => {
-  const scale = 2
-
   return (
     <svg
-      width='12'
-      height='600'
-      viewBox='0 0 9 500'
+      width='9'
+      height='467'
+      viewBox='0 0 9 467'
       fill='none'
     >
       <path

@@ -8,7 +8,11 @@ export default makeStyles(
       justifyContent: 'space-between',
       [breakpoints.up('md')]: {
         paddingLeft: 60,
-        paddingRight: 60,  
+        paddingRight: 60,
+      },
+      [breakpoints.down('sm')]: {
+        paddingLeft: spacing(3),
+        paddingRight: spacing(3),
       },
     },
     content: {
@@ -16,8 +20,15 @@ export default makeStyles(
       flexDirection: 'column',
       justifyContent: 'space-between',
       alignItems: 'center',
-      paddingTop: spacing(10),
-      paddingBottom: spacing(10),
+      [breakpoints.up('sm')]: {
+        paddingTop: spacing(10),
+        paddingBottom: spacing(10),
+      },
+      [breakpoints.down('xs')]: {
+        width: '70%',
+        paddingTop: spacing(5),
+        paddingBottom: spacing(5),
+      },
     },
     copy: {
       textAlign: 'center',

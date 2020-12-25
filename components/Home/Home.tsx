@@ -16,11 +16,9 @@ const Home = (): JSX.Element => {
 
   return (
     <Grid container className={ classes.container }>
-      <Hidden smDown>
-        <div className={ classes.buySellTrack }>
-          <BuySellTrack />
-        </div>
-      </Hidden>
+      <div className={ classes.buySellTrack }>
+        <BuySellTrack />
+      </div>
       <div className={ classes.content }>
         <Imgix
           src='https://prospect-cards-assets.imgix.net/logos/Logotype_White.png?auto=format'
@@ -36,11 +34,9 @@ const Home = (): JSX.Element => {
         <EmailForm />
         <Badge />
       </div>
-      <Hidden xsDown>
-        <div className={ classes.buySellTrack }>
-          <BuySellTrack />
-        </div>
-      </Hidden>
+      <div className={ classes.buySellTrack }>
+        <BuySellTrack />
+      </div>
     </Grid>
   )
 }
