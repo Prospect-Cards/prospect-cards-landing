@@ -10,7 +10,6 @@ export default makeStyles(
         paddingLeft: 60,
         paddingRight: 60,  
       },
-      
     },
     content: {
       display: 'flex',

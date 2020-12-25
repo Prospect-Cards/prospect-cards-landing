@@ -17,7 +17,7 @@ const theme = createMuiTheme({
         fontSize: '1.25rem',
         fontFamily: 'acumin-pro, sans-serif;',
         color: 'white',
-        width: '50%',
+        paddingRight: 10,
       },
     },
   },

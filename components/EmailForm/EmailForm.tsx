@@ -1,5 +1,6 @@
 import * as Yup from 'yup'
 import { Form, Formik } from 'formik'
+import { Hidden } from '@material-ui/core'
 import {
   JoinMailingListMutationFn,
   JoinMailingListMutationVariables,
@@ -46,27 +47,48 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
       >
         {() => {
           return (
-            <Form>
-              <FormTextField
-                placeholder='Enter Email Address'
-                variant='standard'
-                name='email'
-                fullWidth
-                InputProps={ {
-                  className: classes.input,
-                  endAdornment: (
-                    <LoadingButton
-                      variant='contained'
-                      type='submit'
-                      className={ classes.submitBtn }
-                      loading={ loading }
-                    >
-                      Submit
-                    </LoadingButton>
-                  ),
-                } }
-              />
-            </Form>
+            <>
+              <Hidden smDown>
+                <Form>
+                  <FormTextField
+                    placeholder='Enter Email Address'
+                    variant='standard'
+                    name='email'
+                    fullWidth
+                    InputProps={ {
+                      endAdornment: (
+                        <LoadingButton
+                          variant='contained'
+                          type='submit'
+                          className={ classes.submitBtn }
+                          loading={ loading }
+                        >
+                          Submit
+                        </LoadingButton>
+                      ),
+                    } }
+                  />
+                </Form>
+              </Hidden>
+              <Hidden mdUp>
+                <Form>
+                  <FormTextField
+                    placeholder='Enter Email Address'
+                    variant='standard'
+                    name='email'
+                    fullWidth
+                  />
+                  <LoadingButton
+                    variant='contained'
+                    type='submit'
+                    className={ classes.submitBtn }
+                    loading={ loading }
+                  >
+                    Submit
+                  </LoadingButton>
+                </Form>
+              </Hidden>
+            </>
           )
         }}
       </Formik>
