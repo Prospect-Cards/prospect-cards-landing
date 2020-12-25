@@ -14,7 +14,7 @@ const theme = createMuiTheme({
         },
       },
       input: {
-        fontSize: 20,
+        fontSize: '1.25rem',
         fontFamily: 'acumin-pro, sans-serif;',
         color: 'white',
         width: '50%',

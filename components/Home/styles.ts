@@ -1,13 +1,16 @@
 import { StyleRules, Theme, makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(
-  ({ spacing }: Theme): StyleRules => ({
+  ({ spacing, breakpoints }: Theme): StyleRules => ({
     container: {
       minHeight: '100vh',
       display: 'flex',
       justifyContent: 'space-between',
-      paddingLeft: 60,
-      paddingRight: 60,
+      [breakpoints.up('md')]: {
+        paddingLeft: 60,
+        paddingRight: 60,  
+      },
+      
     },
     content: {
       display: 'flex',
