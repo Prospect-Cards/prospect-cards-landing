@@ -38,8 +38,17 @@ const App = (props: AppProps): JSX.Element => {
             />
           </Head>
           <ApolloProvider client={ apolloClient }>
-            <video autoPlay muted loop id='myVideo'>
-              <source src='https://prospect-cards-assets.s3.amazonaws.com/landing/prospect-cards-landing.mp4' type='video/mp4' />
+            <video
+              autoPlay
+              muted
+              loop
+              id='myVideo'
+              poster='https://prospect-cards-assets.imgix.net/landing/prospect-cards-landing.gif'
+            >
+              <source
+                src='https://prospect-cards-assets.s3.amazonaws.com/landing/prospect-cards-landing.mp4'
+                type='video/mp4'
+              />
             </video>
             <div className='content'>
               <AppContainer { ...props } />
