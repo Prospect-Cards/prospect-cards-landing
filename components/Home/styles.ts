@@ -27,7 +27,7 @@ export default makeStyles(
       [breakpoints.down('xs')]: {
         width: '70%',
         paddingTop: spacing(5),
-        paddingBottom: spacing(5),
+        paddingBottom: spacing(8),
       },
     },
     copy: {
