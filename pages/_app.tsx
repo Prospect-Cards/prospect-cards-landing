@@ -43,7 +43,7 @@ const App = (props: AppProps): JSX.Element => {
               muted
               loop
               id='myVideo'
-              poster='https://prospect-cards-assets.imgix.net/landing/prospect-cards-landing.gif'
+              poster='https://prospect-cards-assets.imgix.net/landing/prospect-cards-landing-short.gif'
             >
               <source
                 src='https://prospect-cards-assets.s3.amazonaws.com/landing/prospect-cards-landing.mp4'
