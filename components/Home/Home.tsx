@@ -3,7 +3,7 @@ import { Mixpanel } from 'lib/mixpanel'
 import Badge from 'assets/svg/Badge'
 import BuySellTrack from 'assets/svg/BuySellTrack'
 import EmailForm from 'components/EmailForm'
-import Logo from 'assets/svg/Logo'
+import Imgix from 'react-imgix'
 import React, { useEffect } from 'react'
 import useStyles from './styles'
 
@@ -22,7 +22,11 @@ const Home = (): JSX.Element => {
         </div>
       </Hidden>
       <div className={ classes.content }>
-        <Logo />
+        <Imgix
+          src='https://prospect-cards-assets.imgix.net/logos/Logotype_White.png?auto=format'
+          width={ 174 }
+          height={ 83 }
+        />
         <div className={ classes.copy }>
           <Typography variant='h1'>COMING SOON.</Typography>
           <Typography variant='body1'>

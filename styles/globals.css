@@ -26,31 +26,9 @@ a {
 
 .content {
   position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  top: 0;
   width: 100%;
-  padding: 20px;
 }
-
-.bg {
-  /* The image used */
-  background-image: url("https://prospect-cards-assets.imgix.net/landing/Baseball_2.jpg?auto=format&blend-color=3b3d42&h=1000");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  -moz-transition: background 1.5s linear;
-  -o-transition: background 1.5s linear;
-  -ms-transition: background 1.5s linear;
-  transition: background 1.5s linear;
-}
-
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white !important;
