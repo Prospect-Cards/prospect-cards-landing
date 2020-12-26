@@ -9,12 +9,14 @@ export default makeStyles(
       },
       // color: '#D29D1B',
     },
+    btnBox: {
+      marginBottom: 13,
+    },
     submitBtn: {
       backgroundColor: '#FEFEFE',
       borderRadius: 18,
-      marginBottom: 13,
-      height: 32,
-      width: '100% !important',
+      height: '100%',
+      width: '100%',
     },
   }),
 )

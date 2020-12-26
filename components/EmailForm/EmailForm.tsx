@@ -1,6 +1,6 @@
 import * as Yup from 'yup'
+import { Box, Hidden } from '@material-ui/core'
 import { Form, Formik } from 'formik'
-import { Hidden } from '@material-ui/core'
 import {
   JoinMailingListMutationFn,
   JoinMailingListMutationVariables,
@@ -60,14 +60,16 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
                     } }
                     InputProps={ {
                       endAdornment: (
-                        <LoadingButton
-                          variant='contained'
-                          type='submit'
-                          className={ classes.submitBtn }
-                          loading={ loading }
-                        >
-                          Submit
-                        </LoadingButton>
+                        <Box height={ 32 } width={ 1 } className={ classes.btnBox }>
+                          <LoadingButton
+                            variant='contained'
+                            type='submit'
+                            className={ classes.submitBtn }
+                            loading={ loading }
+                          >
+                            Submit
+                          </LoadingButton>
+                        </Box>
                       ),
                     } }
                   />
@@ -84,15 +86,16 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
                       className: classes.input,
                     } }
                   />
-                  <LoadingButton
-                    variant='contained'
-                    type='submit'
-                    className={ classes.submitBtn }
-                    loading={ loading }
-                    size='small'
-                  >
-                    Submit
-                  </LoadingButton>
+                  <Box height={ 32 } width={ 1 } className={ classes.btnBox }>
+                    <LoadingButton
+                      variant='contained'
+                      type='submit'
+                      className={ classes.submitBtn }
+                      loading={ loading }
+                    >
+                      Submit
+                    </LoadingButton>
+                  </Box>
                 </Form>
               </Hidden>
             </>
