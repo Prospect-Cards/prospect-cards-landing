@@ -55,6 +55,9 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
                     variant='standard'
                     name='email'
                     fullWidth
+                    inputProps={ {
+                      className: classes.input,
+                    } }
                     InputProps={ {
                       endAdornment: (
                         <LoadingButton
