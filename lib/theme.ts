@@ -46,7 +46,7 @@ const theme = createMuiTheme({
     },
     button: {
       fontFamily: 'acumin-pro-condensed, sans-serif;',
-      fontSize: '1.125rem',
+      fontSize: '1.25rem',
       fontWeight: 700,
       letterSpacing: '0.06rem',
     },
