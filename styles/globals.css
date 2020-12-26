@@ -30,7 +30,14 @@ a {
   width: 100%;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.overflow {
+  overflow-y: scroll;
+  -ms-overflow-y: scroll;
+  height: 100vh;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white !important;
   opacity: 1 !important; /* Firefox */
 }
