@@ -44,7 +44,7 @@ const App = (props: AppProps): JSX.Element => {
               loop
               id='myVideo'
               playsInline
-              poster='https://prospect-cards-assets.imgix.net/landing/prospect-cards-landing.gif'
+              poster='https://prospect-cards-assets.imgix.net/landing/prospect-cards-landing-short.gif'
             >
               <source
                 src='https://prospect-cards-assets.s3.amazonaws.com/landing/prospect-cards-landing.mp4'
