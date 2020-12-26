@@ -21,13 +21,13 @@ export default makeStyles(
       justifyContent: 'space-between',
       alignItems: 'center',
       [breakpoints.up('sm')]: {
-        paddingTop: spacing(10),
-        paddingBottom: spacing(10),
+        marginTop: spacing(10),
+        marginBottom: spacing(10),
       },
       [breakpoints.down('xs')]: {
         width: '70%',
-        paddingTop: spacing(5),
-        paddingBottom: spacing(8),
+        paddingTop: spacing(3),
+        paddingBottom: spacing(3),
       },
     },
     copy: {

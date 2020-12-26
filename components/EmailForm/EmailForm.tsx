@@ -89,6 +89,7 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
                     type='submit'
                     className={ classes.submitBtn }
                     loading={ loading }
+                    size='small'
                   >
                     Submit
                   </LoadingButton>
