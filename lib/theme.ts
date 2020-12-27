@@ -20,6 +20,11 @@ const theme = createMuiTheme({
         paddingRight: 10,
       },
     },
+    MuiFormHelperText: {
+      root: {
+        color: '#D29D1B !important',
+      },
+    },
   },
   palette: {
     primary: {

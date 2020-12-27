@@ -19,7 +19,9 @@ const AppContainer = ({
         </Container>
       </main>
 
-      <ToastContainer position={ toast.POSITION.BOTTOM_CENTER } />
+      <ToastContainer
+        position={ toast.POSITION.BOTTOM_CENTER }
+      />
     </>
   )
 }

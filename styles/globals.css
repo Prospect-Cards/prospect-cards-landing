@@ -41,3 +41,14 @@ a {
   color: white !important;
   opacity: 1 !important; /* Firefox */
 }
+
+.Toastify__toast.Toastify__toast--success {
+  background: #d29d1b;
+  color: black;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.Toastify__close-button.Toastify__close-button--success {
+  color: black;
+}

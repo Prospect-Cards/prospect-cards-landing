@@ -42,7 +42,7 @@ const showFeedback = new ApolloLink((operation, forward) => {
         response.data[operation.operationName].message
       ) {
         toast.success(response.data[operation.operationName].message, {
-          autoClose: 4000,
+          autoClose: 6000,
         })
       }
 
