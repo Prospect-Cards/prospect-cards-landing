@@ -25,7 +25,7 @@ const Home = (): JSX.Element => {
           width={ 174 }
         />
         <div className={ classes.copy }>
-          <Typography variant='h1'>Become a Seller</Typography>
+          <Typography variant='h1'>BECOME A SELLER.</Typography>
           <Typography variant='body1'>
             Enter your email address below to join our waitlist to become a
             seller.
