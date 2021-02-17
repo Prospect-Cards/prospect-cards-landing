@@ -1,4 +1,4 @@
-import { Grid, Hidden, Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { Mixpanel } from 'lib/mixpanel'
 import Badge from 'assets/svg/Badge'
 import BuySellTrack from 'assets/svg/BuySellTrack'
@@ -21,14 +21,16 @@ const Home = (): JSX.Element => {
       </div>
       <div className={ classes.content }>
         <Imgix
-          src='https://prospect-cards-assets.imgix.net/logos/Logotype_White.png?auto=format'
+          src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
           width={ 174 }
-          height={ 83 }
         />
         <div className={ classes.copy }>
-          <Typography variant='h1'>COMING SOON.</Typography>
+          <Typography variant='h1'>Become a Seller</Typography>
           <Typography variant='body1'>
-            Sign up to be notified when the site launches
+            Enter your email address below to join our waitlist to become a
+            seller.
+            <br/>
+            We'll let you know as soon as you're approved!
           </Typography>
         </div>
         <EmailForm />
