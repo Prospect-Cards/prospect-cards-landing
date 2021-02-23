@@ -20,16 +20,18 @@ const Home = (): JSX.Element => {
         <BuySellTrack />
       </div>
       <div className={ classes.content }>
-        <Imgix
-          src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-          width={ 174 }
-        />
+        <a href='https://prospect.cards'>
+          <Imgix
+            src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+            width={ 174 }
+          />
+        </a>
         <div className={ classes.copy }>
           <Typography variant='h1'>BECOME A SELLER.</Typography>
           <Typography variant='body1'>
             Enter your email address below to join our waitlist to become a
             seller.
-            <br/>
+            <br />
             We'll let you know as soon as you're approved!
           </Typography>
         </div>
