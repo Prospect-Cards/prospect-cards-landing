@@ -6,6 +6,7 @@
     "dev": "next dev -p 3001",
     "debug": "NODE_OPTIONS='--inspect' next dev -p 3001",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start -p $PORT",
     "heroku-postbuild": "npm run build",
     "lint": "node ./node_modules/.bin/eslint ./src/ --ext=js,jsx,ts,tsx --fix",
