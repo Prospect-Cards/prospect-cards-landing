@@ -3,7 +3,6 @@ import 'styles/globals.css'
 import { ApolloProvider } from '@apollo/client'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { useApollo } from 'lib/apollo'
-import { useRouter } from 'next/router'
 import AppContainer from 'components/AppContainer'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import ErrorBoundary from 'components/ErrorBoundary'
@@ -17,7 +16,6 @@ import type { AppProps /*, AppContext */ } from 'next/app'
 import HttpsRedirect from 'react-https-redirect'
 
 const App = (props: AppProps): JSX.Element => {
-  const router = useRouter()
   const apolloClient = useApollo(props.pageProps)
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -30,7 +28,7 @@ const App = (props: AppProps): JSX.Element => {
   return (
     <MuiThemeProvider theme={ theme }>
       <CssBaseline />
-      <HttpsRedirect disabled={ router.asPath === '/maintenance' }>
+      <HttpsRedirect>
         <ErrorBoundary>
           <Head>
             <title>Prospect Cards - Sports Card Marketplace</title>

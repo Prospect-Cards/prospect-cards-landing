@@ -1,4 +1,4 @@
-import {Box, Grid, Typography} from '@material-ui/core'
+import { Box, Grid, Typography } from '@material-ui/core'
 import { Instagram } from '@material-ui/icons'
 import Badge from 'assets/svg/Badge'
 import BuySellTrack from 'assets/svg/BuySellTrack'
@@ -37,8 +37,6 @@ const Maintenance = (): JSX.Element => {
           </Typography>
           <a
             href='https://www.instagram.com/prospect.cards/'
-            target='_blank'
-            rel='noreferrer'
             aria-label='Instagram Account'
           >
             <Instagram />
