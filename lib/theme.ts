@@ -45,9 +45,56 @@ const theme = createMuiTheme({
       fontSize: '7rem',
       color: 'white',
     },
+    h2: {
+      fontWeight: 500,
+      fontSize: '2.125rem',
+      letterSpacing: '0.02rem',
+    },
+    h3: {
+      fontWeight: 900,
+      fontSize: '1.5rem',
+      letterSpacing: '0.02rem',
+      lineHeight: 1.43,
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: '1.125rem',
+    },
+    h5: {
+      fontFamily: 'acumin-pro-condensed, helvetica',
+      fontWeight: 700,
+      fontSize: '1.125rem',
+      textTransform: 'uppercase',
+      lineHeight: 1.11,
+      letterSpacing: '0.03rem',
+    },
+    h6: {
+      fontFamily: 'acumin-pro-wide, acumin-pro, helvetica',
+      fontWeight: 600,
+      fontSize: '0.625rem',
+      textTransform: 'uppercase',
+      lineHeight: 1.56,
+      letterSpacing: '0.01rem',
+    },
+    subtitle1: {
+      fontWeight: 600,
+      fontSize: '1rem',
+    },
+    subtitle2: {
+      fontWeight: 400,
+      fontSize: '.75rem',
+      letterSpacing: '0.06rem',
+      lineHeight: 0.9,
+      textTransform: 'uppercase',
+      color: '#969696',
+    },
     body1: {
       fontSize: '1rem',
       fontWeight: 400,
+    },
+    body2: {
+      fontWeight: 400,
+      lineHeight: '1.125rem',
     },
     button: {
       fontFamily: 'acumin-pro-condensed, sans-serif;',
