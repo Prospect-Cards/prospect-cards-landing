@@ -1,3 +1,4 @@
+import 'lib/experimentEmitter'
 import {
   Experiment,
   Variant,
