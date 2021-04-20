@@ -8,6 +8,7 @@
   "possibleTypes": {
     "ActiveRecordInterface": [
       "Address",
+      "AdminDashboard",
       "CounterOffer",
       "EmailPreference",
       "LegalDocumentVersion",
@@ -20,6 +21,7 @@
       "Offer",
       "Purchase",
       "Review",
+      "Search",
       "Seller",
       "SellerInvitation",
       "Shipment",
