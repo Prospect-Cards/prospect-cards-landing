@@ -4,7 +4,7 @@ import {
   Variant,
   experimentDebugger,
 } from '@marvelapp/react-ab-test'
-import { Grid, Typography } from '@material-ui/core'
+import {Grid, NoSsr, Typography} from '@material-ui/core'
 import { Mixpanel } from 'lib/mixpanel'
 import Badge from 'assets/svg/Badge'
 import BuySellTrack from 'assets/svg/BuySellTrack'
@@ -29,20 +29,22 @@ const Home = (): JSX.Element => {
       </div>
       <div className={ classes.content }>
         <a href='https://prospect.cards'>
-          <Experiment name='Logo Size - Test'>
-            <Variant name='Small-174'>
-              <Imgix
-                src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-                width={ 174 }
-              />
-            </Variant>
-            <Variant name='Large-220'>
-              <Imgix
-                src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-                width={ 220 }
-              />
-            </Variant>
-          </Experiment>
+          <NoSsr>
+            <Experiment name='Logo Size - Test'>
+              <Variant name='Small-174'>
+                <Imgix
+                  src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+                  width={ 174 }
+                />
+              </Variant>
+              <Variant name='Large-220'>
+                <Imgix
+                  src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+                  width={ 220 }
+                />
+              </Variant>
+            </Experiment>
+          </NoSsr>
         </a>
         <div className={ classes.copy }>
           <Typography variant='h1'>BECOME A SELLER.</Typography>
