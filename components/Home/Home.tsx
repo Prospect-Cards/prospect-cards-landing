@@ -1,3 +1,8 @@
+import {
+  Experiment,
+  Variant,
+  experimentDebugger,
+} from '@marvelapp/react-ab-test'
 import { Grid, Typography } from '@material-ui/core'
 import { Mixpanel } from 'lib/mixpanel'
 import Badge from 'assets/svg/Badge'
@@ -6,6 +11,8 @@ import EmailForm from 'components/EmailForm'
 import Imgix from 'react-imgix'
 import React, { useEffect } from 'react'
 import useStyles from './styles'
+
+experimentDebugger.enable()
 
 const Home = (): JSX.Element => {
   const classes = useStyles()
@@ -21,10 +28,20 @@ const Home = (): JSX.Element => {
       </div>
       <div className={ classes.content }>
         <a href='https://prospect.cards'>
-          <Imgix
-            src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-            width={ 174 }
-          />
+          <Experiment name='Logo Size - Test'>
+            <Variant name='Small-174'>
+              <Imgix
+                src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+                width={ 174 }
+              />
+            </Variant>
+            <Variant name='Large-220'>
+              <Imgix
+                src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+                width={ 220 }
+              />
+            </Variant>
+          </Experiment>
         </a>
         <div className={ classes.copy }>
           <Typography variant='h1'>BECOME A SELLER.</Typography>

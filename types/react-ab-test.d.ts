@@ -1,7 +1,17 @@
 declare module '@marvelapp/react-ab-test' {
   declare const emitter: {
-    defineVariants: (variant: string, variants: string[]) => void;
+    defineVariants: (
+      experiment: string,
+      variants: string[],
+      weights: number[]
+    ) => void;
     emitWin: (name: string) => void;
+    addPlayListener: (
+      listener: (experimentName: string, variantName: string) => void
+    ) => void;
+    addWinListener: (
+      listener: (experimentName: string, variantName: string) => void
+    ) => void;
   }
   declare const experimentDebugger: {
     enable: () => void;
