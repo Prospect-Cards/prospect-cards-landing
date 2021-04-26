@@ -1,6 +1,5 @@
 import { Box, Grid, Typography } from '@material-ui/core'
 import { Instagram } from '@material-ui/icons'
-import Badge from 'assets/svg/Badge'
 import BuySellTrack from 'assets/svg/BuySellTrack'
 import Imgix from 'react-imgix'
 import React from 'react'
