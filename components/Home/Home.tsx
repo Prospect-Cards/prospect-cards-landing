@@ -1,19 +1,11 @@
 import 'lib/experimentEmitter'
-import {
-  Experiment,
-  Variant,
-  experimentDebugger,
-} from '@marvelapp/react-ab-test'
-import {Grid, NoSsr, Typography} from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { Mixpanel } from 'lib/mixpanel'
-import Badge from 'assets/svg/Badge'
+import ButtonWithArrow from 'components/common/ButtonWithArrow'
 import BuySellTrack from 'assets/svg/BuySellTrack'
-import EmailForm from 'components/EmailForm'
 import Imgix from 'react-imgix'
 import React, { useEffect } from 'react'
 import useStyles from './styles'
-
-experimentDebugger.enable()
 
 const Home = (): JSX.Element => {
   const classes = useStyles()
@@ -29,34 +21,34 @@ const Home = (): JSX.Element => {
       </div>
       <div className={ classes.content }>
         <a href='https://prospect.cards'>
-          <NoSsr>
-            <Experiment name='Logo Size - Test'>
-              <Variant name='Small-174'>
-                <Imgix
-                  src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-                  width={ 174 }
-                />
-              </Variant>
-              <Variant name='Large-220'>
-                <Imgix
-                  src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-                  width={ 220 }
-                />
-              </Variant>
-            </Experiment>
-          </NoSsr>
+          <Imgix
+            src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+            width={ 174 }
+          />
         </a>
         <div className={ classes.copy }>
-          <Typography variant='h1'>BECOME A SELLER.</Typography>
+          <Typography variant='h1'>JOIN PROSPECT CARDS.</Typography>
           <Typography variant='body1'>
-            Enter your email address below to join our waitlist to become a
-            seller.
+            Welcome to Prospect Cards! We now allow all users to list cards for
+            sale.
             <br />
-            We'll let you know as soon as you're approved!
+            Click below to get started.
           </Typography>
         </div>
-        <EmailForm />
-        <Badge />
+        <div>
+          <ButtonWithArrow href='https://prospect.cards/register'>
+            Join Prospect Cards
+          </ButtonWithArrow>
+        </div>
+        <Imgix
+          imgixParams={ { auto: 'compress,format' } }
+          src='https://prospect-cards-assets.imgix.net/logos/Shield_MultiColor.png'
+          width={ 49 }
+          htmlAttributes={ {
+            alt: 'Prospect Cards Shield Logo',
+            width: 49,
+          } }
+        />
       </div>
       <div className={ classes.buySellTrack }>
         <BuySellTrack />
