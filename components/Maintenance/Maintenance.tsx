@@ -42,7 +42,15 @@ const Maintenance = (): JSX.Element => {
             <Instagram />
           </a>
         </Box>
-        <Badge />
+        <Imgix
+          imgixParams={ { auto: 'compress,format' } }
+          src='https://prospect-cards-assets.imgix.net/logos/Shield_MultiColor.png'
+          width={ 49 }
+          htmlAttributes={ {
+            alt: 'Prospect Cards Shield Logo',
+            width: 49,
+          } }
+        />
       </div>
       <div className={ classes.buySellTrack }>
         <BuySellTrack />
