@@ -46,6 +46,19 @@ class MyDocument extends Document {
             property='og:description'
             content='Prospect Cards - Sports Card Marketplace'
           />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+
+          <link
+            rel='shortcut icon'
+            type='image/x-icon'
+            sizes='16x16 24x24 32x32 48x48 64x64 120x120 144x144'
+            href={ `${process.env.NEXT_PUBLIC_CLIENT_URI}/favicon.ico` }
+          />
+          <link
+            rel='apple-touch-icon-precomposed'
+            sizes='152x152'
+            href={ `${process.env.NEXT_PUBLIC_CLIENT_URI}/favicon-152.png` }
+          />
           <link rel='stylesheet' href='https://use.typekit.net/mhc5mbf.css' />
         </Head>
         <body>
