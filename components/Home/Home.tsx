@@ -3,6 +3,7 @@ import { Grid, Typography } from '@material-ui/core'
 import { Mixpanel } from 'lib/mixpanel'
 import ButtonWithArrow from 'components/common/ButtonWithArrow'
 import BuySellTrack from 'assets/svg/BuySellTrack'
+import EmailForm from 'components/EmailForm'
 import Imgix from 'react-imgix'
 import React, { useEffect } from 'react'
 import useStyles from './styles'
@@ -27,19 +28,14 @@ const Home = (): JSX.Element => {
           />
         </a>
         <div className={ classes.copy }>
-          <Typography variant='h1'>JOIN PROSPECT CARDS.</Typography>
+          <Typography variant='h1'>ENTER TO WIN.</Typography>
           <Typography variant='body1'>
-            Welcome to Prospect Cards! We now allow all users to list cards for
-            sale.
+            Welcome to Prospect Cards!
             <br />
-            Click below to get started.
+            Enter your email address below for your chance to win!
           </Typography>
         </div>
-        <div>
-          <ButtonWithArrow href='https://prospect.cards/register'>
-            Join Prospect Cards
-          </ButtonWithArrow>
-        </div>
+        <EmailForm />
         <Imgix
           imgixParams={ { auto: 'compress,format' } }
           src='https://prospect-cards-assets.imgix.net/logos/Shield_MultiColor.png'
