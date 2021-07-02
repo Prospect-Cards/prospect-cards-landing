@@ -35,7 +35,17 @@ const Home = (): JSX.Element => {
             Enter your email address below for your chance to win!
           </Typography>
         </div>
-        <EmailForm />
+        <div>
+          <EmailForm />
+          <Typography variant='body2' align='center'>
+            Winner will be chosen on July 5th, 2021 and will be asked to provide
+            a United States mailing address at that time.
+            <br/>
+            No purchase necessary
+            to enter.
+          </Typography>
+        </div>
+
         <Imgix
           imgixParams={ { auto: 'compress,format' } }
           src='https://prospect-cards-assets.imgix.net/logos/Shield_MultiColor.png'
