@@ -49,11 +49,12 @@ const EmailForm = ({ loading, submit }: Props): JSX.Element => {
           return (
             <>
               <Hidden smDown>
-                <Form>
+                <Form autoComplete='off'>
                   <FormTextField
                     placeholder='Enter Email Address'
                     variant='standard'
                     name='email'
+                    type='email'
                     fullWidth
                     inputProps={ {
                       className: classes.input,
