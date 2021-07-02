@@ -40,13 +40,17 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name='theme-color' content={ theme.palette.primary.main } />
+          <meta
+            name='description'
+            content='Sports card marketplace designed by and catered to hobby enthusiasts. We love the community and are persistently working to make a marketplace that better serves it.'
+          />
           <meta property='og:site_name' content='Prospect Cards' />
           <meta property='og:type' content='website' />
           <meta
             property='og:description'
             content='Prospect Cards - Sports Card Marketplace'
           />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name='apple-mobile-web-app-capable' content='yes' />
 
           <link
             rel='shortcut icon'
