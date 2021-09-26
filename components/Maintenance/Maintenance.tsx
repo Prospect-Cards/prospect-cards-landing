@@ -16,7 +16,7 @@ const Maintenance = (): JSX.Element => {
       <div className={ classes.content }>
         <a href='https://prospect.cards'>
           <Imgix
-            src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+            src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
             width={ 174 }
           />
         </a>
@@ -43,7 +43,7 @@ const Maintenance = (): JSX.Element => {
         </Box>
         <Imgix
           imgixParams={ { auto: 'compress,format' } }
-          src='https://prospect-cards-assets.imgix.net/logos/Shield_MultiColor.png'
+          src='https://prospect-cards-images.imgix.net/logos/Shield_MultiColor.png'
           width={ 49 }
           htmlAttributes={ {
             alt: 'Prospect Cards Shield Logo',

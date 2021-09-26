@@ -44,10 +44,10 @@ const App = (props: AppProps): JSX.Element => {
               loop
               id='myVideo'
               playsInline
-              poster='https://prospect-cards-assets.imgix.net/landing/prospect-cards-landing-short.gif'
+              poster='https://prospect-cards-images.imgix.net/landing/prospect-cards-landing-short.gif'
             >
               <source
-                src='https://prospect-cards-assets.s3.amazonaws.com/landing/prospect-cards-landing.mp4'
+                src='https://prospect-cards-images.s3.amazonaws.com/landing/prospect-cards-landing.mp4'
                 type='video/mp4'
               />
             </video>

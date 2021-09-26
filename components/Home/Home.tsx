@@ -23,7 +23,7 @@ const Home = (): JSX.Element => {
       <div className={ classes.content }>
         <a href='https://prospect.cards'>
           <Imgix
-            src='https://prospect-cards-assets.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+            src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
             width={ 174 }
           />
         </a>
@@ -38,17 +38,16 @@ const Home = (): JSX.Element => {
         <div>
           <EmailForm />
           <Typography variant='body2' align='center'>
-            Winner will be chosen on July 5th, 2021 and will be asked to provide
-            a United States mailing address at that time.
-            <br/>
-            No purchase necessary
-            to enter.
+            Winner will be chosen on September 27th, 2021 and will be asked to
+            provide a United States mailing address at that time.
+            <br />
+            No purchase necessary to enter.
           </Typography>
         </div>
 
         <Imgix
           imgixParams={ { auto: 'compress,format' } }
-          src='https://prospect-cards-assets.imgix.net/logos/Shield_MultiColor.png'
+          src='https://prospect-cards-images.imgix.net/logos/Shield_MultiColor.png'
           width={ 49 }
           htmlAttributes={ {
             alt: 'Prospect Cards Shield Logo',
