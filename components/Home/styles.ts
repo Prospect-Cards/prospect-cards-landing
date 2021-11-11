@@ -40,5 +40,13 @@ export default makeStyles(
       alignItems: 'center',
       width: 9,
     },
+
+    cardImgContainer: {
+      marginLeft: spacing(6),
+      marginRight: spacing(6),
+    },
+    cardImg: {
+      borderRadius: 10,
+    },
   }),
 )
