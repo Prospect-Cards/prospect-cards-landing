@@ -18,9 +18,7 @@ const Home = (): JSX.Element => {
 
   return (
     <Grid container className={ classes.container }>
-      <div className={ classes.buySellTrack }>
-        <BuySellTrack />
-      </div>
+      <div className={ classes.buySellTrack }>{/*<BuySellTrack />*/}</div>
       <div className={ classes.content }>
         <Image
           src='/images/kobe-CC-9-front-coined.jpeg'
@@ -38,6 +36,7 @@ const Home = (): JSX.Element => {
           <Typography variant='h1' className={ classes.times }>
             &times;
           </Typography>
+
           <a href='https://prospect.cards'>
             <Imgix
               src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
@@ -48,13 +47,14 @@ const Home = (): JSX.Element => {
         <div className={ classes.copy }>
           <Typography variant='h1'>ENTER TO WIN.</Typography>
           <Typography variant='body1'>
-            Welcome to Prospect Cards!
-            <br />
-            Enter your email address below for your chance to win!
+            {/*Welcome to Prospect Cards!*/}
+            {/*<br />*/}
+            Enter your email address below for your chance to win a PSA 9
+            Collector's Choice Kobe rookie card!
           </Typography>
         </div>
         <div>
-          <EmailForm />
+          <EmailForm promotion='LaProper_21_11_13' />
           <Typography variant='body2' align='center'>
             Winner will be chosen on November 13th, 2021 and will be asked to
             provide a United States mailing address at that time.
@@ -73,9 +73,7 @@ const Home = (): JSX.Element => {
           } }
         />
       </div>
-      <div className={ classes.buySellTrack }>
-        <BuySellTrack />
-      </div>
+      <div className={ classes.buySellTrack }>{/*<BuySellTrack />*/}</div>
     </Grid>
   )
 }

@@ -14,6 +14,7 @@ import useStyles from './styles'
 interface Props {
   loading: boolean;
   submit: JoinMailingListMutationFn;
+  promotion?: string;
 }
 
 const FormSchema = Yup.object().shape({
@@ -22,11 +23,12 @@ const FormSchema = Yup.object().shape({
     .required('Email address please'),
 })
 
-const initialValues: JoinMailingListMutationVariables = {
-  email: '',
-}
-const EmailForm = ({ loading, submit }: Props): JSX.Element => {
+const EmailForm = ({ loading, submit, promotion }: Props): JSX.Element => {
   const classes = useStyles()
+  const initialValues: JoinMailingListMutationVariables = {
+    email: '',
+    promotion,
+  }
 
   return (
     <div className={ classes.root }>
