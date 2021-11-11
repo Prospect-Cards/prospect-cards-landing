@@ -1,13 +1,17 @@
-import {
-  useJoinMailingListMutation,
-} from 'types/graphql'
+import { useJoinMailingListMutation } from 'types/graphql'
 import Dumb from './EmailForm'
 import React from 'react'
 
-const EmailForm = (): JSX.Element => {
+interface Props {
+  promotion?: string;
+}
+
+const EmailForm = ({ promotion }: Props): JSX.Element => {
   const [joinMailingList, { loading }] = useJoinMailingListMutation()
 
-  return <Dumb loading={ loading } submit={ joinMailingList } />
+  return (
+    <Dumb loading={ loading } submit={ joinMailingList } promotion={ promotion } />
+  )
 }
 
 export default EmailForm
