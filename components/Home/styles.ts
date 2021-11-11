@@ -40,5 +40,12 @@ export default makeStyles(
       alignItems: 'center',
       width: 9,
     },
+
+    cardImg: {
+      borderRadius: 10,
+    },
+    times: {
+      height: '100%',
+    },
   }),
 )
