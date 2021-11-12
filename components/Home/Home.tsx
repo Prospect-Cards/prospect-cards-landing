@@ -42,7 +42,7 @@ const Home = (): JSX.Element => {
         </div>
         <div className={ classes.center }>
           <Typography variant='body1'>Runner Up Wins</Typography>
-          <Typography variant='h5'>$50 Credit on Prospect Cards</Typography>
+          <Typography variant='h5' gutterBottom>$50 Credit on Prospect Cards</Typography>
         </div>
         <Box
           display='flex'

@@ -22,7 +22,7 @@ export default makeStyles(
       alignItems: 'center',
       [breakpoints.up('sm')]: {
         marginTop: spacing(8),
-        marginBottom: spacing(10),
+        marginBottom: spacing(6),
       },
       [breakpoints.down('xs')]: {
         width: '70%',
