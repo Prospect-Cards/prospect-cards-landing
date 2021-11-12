@@ -40,7 +40,9 @@ export default makeStyles(
       alignItems: 'center',
       width: 9,
     },
-
+    bannerText: {
+      fontSize: '3rem',
+    },
     cardImg: {
       borderRadius: 10,
     },

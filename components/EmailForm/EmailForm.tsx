@@ -8,7 +8,7 @@ import {
 import { Mixpanel } from 'lib/mixpanel'
 import FormTextField from 'components/common/formFields/FormTextField'
 import LoadingButton from 'components/common/LoadingButton'
-import React from 'react'
+import React, { useRef } from 'react'
 import useStyles from './styles'
 
 interface Props {
@@ -24,6 +24,7 @@ const FormSchema = Yup.object().shape({
 })
 
 const EmailForm = ({ loading, submit, promotion }: Props): JSX.Element => {
+  const inputRef = useRef<HTMLInputElement>()
   const classes = useStyles()
   const initialValues: JoinMailingListMutationVariables = {
     email: '',
@@ -40,6 +41,9 @@ const EmailForm = ({ loading, submit, promotion }: Props): JSX.Element => {
         onSubmit={ async(variables, { resetForm }) => {
           submit({ variables }).then((res) => {
             if (res.data.joinMailingList.success) {
+              if (inputRef.current) {
+                inputRef.current.blur()
+              }
               resetForm()
               Mixpanel.track('Joined Mailing List', { email: variables.email })
               Mixpanel.people.set({ $email: variables.email })
@@ -53,6 +57,7 @@ const EmailForm = ({ loading, submit, promotion }: Props): JSX.Element => {
               <Hidden smDown>
                 <Form autoComplete='off'>
                   <FormTextField
+                    inputRef={ inputRef }
                     placeholder='Enter Email Address'
                     variant='standard'
                     name='email'

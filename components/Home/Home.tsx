@@ -23,8 +23,8 @@ const Home = (): JSX.Element => {
         <Image
           src='/images/kobe-CC-9-front-coined.jpeg'
           className={ classes.cardImg }
-          width={ 300 }
-          height={ 504 }
+          width={ 150 }
+          height={ 252 }
         />
         <Box
           display='flex'
@@ -32,7 +32,7 @@ const Home = (): JSX.Element => {
           justifyContent='space-around'
           width='75%'
         >
-          <Image src='/images/LA_Proper_logo.png' width={ 174 } height={ 174 } />
+          <Image src='/images/LA_Proper_logo.png' width={ 120 } height={ 120 } />
           <Typography variant='h1' className={ classes.times }>
             &times;
           </Typography>
@@ -40,12 +40,14 @@ const Home = (): JSX.Element => {
           <a href='https://prospect.cards'>
             <Imgix
               src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-              width={ 174 }
+              width={ 120 }
             />
           </a>
         </Box>
         <div className={ classes.copy }>
-          <Typography variant='h1'>ENTER TO WIN.</Typography>
+          <Typography variant='h1' className={ classes.bannerText }>
+            ENTER TO WIN.
+          </Typography>
           <Typography variant='body1'>
             {/*Welcome to Prospect Cards!*/}
             {/*<br />*/}
@@ -55,7 +57,7 @@ const Home = (): JSX.Element => {
         </div>
         <div>
           <EmailForm promotion='LaProper_21_11_13' />
-          <Typography variant='body2' align='center'>
+          <Typography variant='caption' align='center' component='p'>
             Winner will be chosen on November 13th, 2021 and will be asked to
             provide a United States mailing address at that time.
             <br />
@@ -63,15 +65,15 @@ const Home = (): JSX.Element => {
           </Typography>
         </div>
 
-        <Imgix
-          imgixParams={ { auto: 'compress,format' } }
-          src='https://prospect-cards-images.imgix.net/logos/Shield_MultiColor.png'
-          width={ 49 }
-          htmlAttributes={ {
-            alt: 'Prospect Cards Shield Logo',
-            width: 49,
-          } }
-        />
+        {/*<Imgix*/}
+        {/*  imgixParams={ { auto: 'compress,format' } }*/}
+        {/*  src='https://prospect-cards-images.imgix.net/logos/Shield_MultiColor.png'*/}
+        {/*  width={ 49 }*/}
+        {/*  htmlAttributes={ {*/}
+        {/*    alt: 'Prospect Cards Shield Logo',*/}
+        {/*    width: 49,*/}
+        {/*  } }*/}
+        {/*/>*/}
       </div>
       <div className={ classes.buySellTrack }>{/*<BuySellTrack />*/}</div>
     </Grid>
