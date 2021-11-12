@@ -44,7 +44,7 @@ export default makeStyles(
       width: 9,
     },
     bannerText: {
-      fontSize: '3rem',
+      fontSize: '3.5rem',
     },
     cardImg: {
       borderRadius: 10,

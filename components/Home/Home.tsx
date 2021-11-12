@@ -18,8 +18,15 @@ const Home = (): JSX.Element => {
 
   return (
     <Grid container className={ classes.container }>
-      <div className={ classes.buySellTrack }>{/*<BuySellTrack />*/}</div>
+      <div className={ classes.buySellTrack }>
+        <BuySellTrack />
+      </div>
       <div className={ classes.content }>
+        <div className={ classes.center }>
+          <Typography variant='h1' className={ classes.bannerText }>
+            ENTER TO WIN.
+          </Typography>
+        </div>
         <div className={ classes.center }>
           <Image
             src='/images/kobe-CC-9-front-coined.jpeg'
@@ -28,14 +35,14 @@ const Home = (): JSX.Element => {
             height={ 252 }
           />
           <div className={ classes.mt }>
-            <Typography variant='h2'>
-              PSA 9 Collector's Choice Kobe Bryant Rookie Card
+            <Typography variant='h3'>
+              PSA 9 Kobe Bryant Rookie Card
             </Typography>
           </div>
         </div>
         <div className={ classes.center }>
-          <Typography variant='h4'>Runner Up Wins</Typography>
-          <Typography variant='h3'>$50 Credit at Prospect Cards</Typography>
+          <Typography variant='body1'>Runner Up Wins</Typography>
+          <Typography variant='h5'>$50 Credit on Prospect Cards</Typography>
         </div>
         <Box
           display='flex'
@@ -57,11 +64,6 @@ const Home = (): JSX.Element => {
             />
           </a>
         </Box>
-        <div className={ classes.center }>
-          <Typography variant='h1' className={ classes.bannerText }>
-            ENTER TO WIN.
-          </Typography>
-        </div>
         <div>
           <EmailForm promotion='LaProper_21_11_13' />
           <Typography variant='caption' align='center' component='p'>
@@ -82,7 +84,9 @@ const Home = (): JSX.Element => {
         {/*  } }*/}
         {/*/>*/}
       </div>
-      <div className={ classes.buySellTrack }>{/*<BuySellTrack />*/}</div>
+      <div className={ classes.buySellTrack }>
+        <BuySellTrack />
+      </div>
     </Grid>
   )
 }
