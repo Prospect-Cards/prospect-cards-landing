@@ -21,7 +21,7 @@ export default makeStyles(
       justifyContent: 'space-between',
       alignItems: 'center',
       [breakpoints.up('sm')]: {
-        marginTop: spacing(10),
+        marginTop: spacing(8),
         marginBottom: spacing(10),
       },
       [breakpoints.down('xs')]: {
@@ -30,8 +30,11 @@ export default makeStyles(
         paddingBottom: spacing(3),
       },
     },
-    copy: {
+    center: {
       textAlign: 'center',
+    },
+    mt: {
+      marginTop: spacing(2),
     },
     buySellTrack: {
       display: 'flex',
@@ -48,6 +51,9 @@ export default makeStyles(
     },
     times: {
       height: '100%',
+      fontSize: '4rem',
+      width: 100,
+      textAlign: 'center',
     },
   }),
 )

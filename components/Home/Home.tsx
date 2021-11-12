@@ -20,39 +20,46 @@ const Home = (): JSX.Element => {
     <Grid container className={ classes.container }>
       <div className={ classes.buySellTrack }>{/*<BuySellTrack />*/}</div>
       <div className={ classes.content }>
-        <Image
-          src='/images/kobe-CC-9-front-coined.jpeg'
-          className={ classes.cardImg }
-          width={ 150 }
-          height={ 252 }
-        />
+        <div className={ classes.center }>
+          <Image
+            src='/images/kobe-CC-9-front-coined.jpeg'
+            className={ classes.cardImg }
+            width={ 150 }
+            height={ 252 }
+          />
+          <div className={ classes.mt }>
+            <Typography variant='h2'>
+              PSA 9 Collector's Choice Kobe Bryant Rookie Card
+            </Typography>
+          </div>
+        </div>
+        <div className={ classes.center }>
+          <Typography variant='h4'>Runner Up Wins</Typography>
+          <Typography variant='h3'>$50 Credit at Prospect Cards</Typography>
+        </div>
         <Box
           display='flex'
           alignItems='center'
           justifyContent='space-around'
-          width='75%'
+          width='45%'
         >
-          <Image src='/images/LA_Proper_logo.png' width={ 120 } height={ 120 } />
-          <Typography variant='h1' className={ classes.times }>
-            &times;
-          </Typography>
+          <Image src='/images/LA_Proper_logo.png' width={ 100 } height={ 100 } />
 
+          <Box display='flex' alignItems='center'>
+            <Typography variant='h1' className={ classes.times }>
+              &times;
+            </Typography>
+          </Box>
           <a href='https://prospect.cards'>
             <Imgix
               src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-              width={ 120 }
+              width={ 100 }
             />
           </a>
         </Box>
-        <div className={ classes.copy }>
+        <div className={ classes.center }>
           <Typography variant='h1' className={ classes.bannerText }>
             ENTER TO WIN.
-          </Typography>
-          <Typography variant='body1'>
-            {/*Welcome to Prospect Cards!*/}
-            {/*<br />*/}
-            Enter your email address below for your chance to win a PSA 9
-            Collector's Choice Kobe rookie card!
           </Typography>
         </div>
         <div>
