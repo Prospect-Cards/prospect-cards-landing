@@ -42,7 +42,9 @@ const Home = (): JSX.Element => {
         </div>
         <div className={ classes.center }>
           <Typography variant='body1'>Runner Up Wins</Typography>
-          <Typography variant='h5' gutterBottom>$100 Credit on Prospect Cards</Typography>
+          <Typography variant='h5' gutterBottom>
+            $100 Credit on Prospect Cards
+          </Typography>
         </div>
         <Box
           display='flex'
@@ -58,10 +60,10 @@ const Home = (): JSX.Element => {
           {/*  </Typography>*/}
           {/*</Box>*/}
           {/*<a href='https://prospect.cards'>*/}
-            <Imgix
-              src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
-              width={ 100 }
-            />
+          <Imgix
+            src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
+            width={ 100 }
+          />
           {/*</a>*/}
         </Box>
         <div>
