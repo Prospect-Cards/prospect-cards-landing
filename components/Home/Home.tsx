@@ -29,20 +29,20 @@ const Home = (): JSX.Element => {
         </div>
         <div className={ classes.center }>
           <Image
-            src='/images/kobe-CC-9-front-coined.jpeg'
+            src='/images/durant-giveaway.png'
             className={ classes.cardImg }
             width={ 150 }
             height={ 252 }
           />
           <div className={ classes.mt }>
             <Typography variant='h3'>
-              PSA 9 Kobe Bryant Rookie Card
+              PSA 9 Kevin Durant Fleer Retro RC
             </Typography>
           </div>
         </div>
         <div className={ classes.center }>
           <Typography variant='body1'>Runner Up Wins</Typography>
-          <Typography variant='h5' gutterBottom>$50 Credit on Prospect Cards</Typography>
+          <Typography variant='h5' gutterBottom>$100 Credit on Prospect Cards</Typography>
         </div>
         <Box
           display='flex'
@@ -65,9 +65,9 @@ const Home = (): JSX.Element => {
           </a>
         </Box>
         <div>
-          <EmailForm promotion='LaProper_21_11_13' />
+          <EmailForm promotion='CardStock_22_01_29' />
           <Typography variant='caption' align='center' component='p'>
-            Winner will be chosen on November 13th, 2021 and will be asked to
+            Winner will be chosen on January 31st, 2022 and will be asked to
             provide a United States mailing address at that time.
             <br />
             No purchase necessary to enter.
