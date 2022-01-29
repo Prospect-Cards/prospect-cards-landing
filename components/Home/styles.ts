@@ -21,8 +21,8 @@ export default makeStyles(
       justifyContent: 'space-between',
       alignItems: 'center',
       [breakpoints.up('sm')]: {
-        marginTop: spacing(10),
-        marginBottom: spacing(10),
+        marginTop: spacing(8),
+        marginBottom: spacing(6),
       },
       [breakpoints.down('xs')]: {
         width: '70%',
@@ -30,8 +30,11 @@ export default makeStyles(
         paddingBottom: spacing(3),
       },
     },
-    copy: {
+    center: {
       textAlign: 'center',
+    },
+    mt: {
+      marginTop: spacing(2),
     },
     buySellTrack: {
       display: 'flex',
@@ -40,8 +43,17 @@ export default makeStyles(
       alignItems: 'center',
       width: 9,
     },
-    inputContainer: {
-      width: '85%',
+    bannerText: {
+      fontSize: '3.5rem',
+    },
+    cardImg: {
+      borderRadius: 10,
+    },
+    times: {
+      height: '100%',
+      fontSize: '4rem',
+      width: 100,
+      textAlign: 'center',
     },
   }),
 )
