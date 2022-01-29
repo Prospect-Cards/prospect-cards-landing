@@ -37,7 +37,7 @@ const Home = (): JSX.Element => {
           </Typography>
         </div>
         <div className={ classes.inputContainer }>
-          <EmailForm promotion='CardStock_21_11_20' />
+          <EmailForm />
           <Typography variant='body2' align='center'>
             Winner will be chosen on November 20th, 2021.
             <br />
