@@ -29,20 +29,20 @@ const Home = (): JSX.Element => {
         </div>
         <div className={ classes.center }>
           <Image
-            src='/images/durant-giveaway.png'
+            src='/images/kobe-giveaway-2022-02-19.png'
             className={ classes.cardImg }
             width={ 150 }
             height={ 252 }
           />
           <div className={ classes.mt }>
             <Typography variant='h3'>
-              PSA 9 Kevin Durant Fleer Retro RC
+              PSA 9 Skybox Premium Kobe Bryant Rookie Card!
             </Typography>
           </div>
         </div>
         <div className={ classes.center }>
           <Typography variant='body1'>Runner Up Wins</Typography>
-          <Typography variant='h5' gutterBottom>$100 Credit on Prospect Cards</Typography>
+          <Typography variant='h5' gutterBottom>$50 Credit on Prospect Cards</Typography>
         </div>
         <Box
           display='flex'
