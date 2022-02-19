@@ -50,19 +50,19 @@ const Home = (): JSX.Element => {
           justifyContent='space-around'
           width='45%'
         >
-          {/*<Image src='/images/LA_Proper_logo.png' width={ 100 } height={ 100 } />*/}
+          <Image src='/images/LA_Proper_logo.png' width={ 100 } height={ 100 } />
 
-          {/*<Box display='flex' alignItems='center'>*/}
-          {/*  <Typography variant='h1' className={ classes.times }>*/}
-          {/*    &times;*/}
-          {/*  </Typography>*/}
-          {/*</Box>*/}
-          {/*<a href='https://prospect.cards'>*/}
+          <Box display='flex' alignItems='center'>
+            <Typography variant='h1' className={ classes.times }>
+              &times;
+            </Typography>
+          </Box>
+          <a href='https://prospect.cards'>
             <Imgix
               src='https://prospect-cards-images.imgix.net/logos/Prospect_crownLogo_white.png?auto=format'
               width={ 100 }
             />
-          {/*</a>*/}
+          </a>
         </Box>
         <div>
           <EmailForm promotion='CardStock_22_01_29' />
