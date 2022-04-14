@@ -29,14 +29,14 @@ const Home = (): JSX.Element => {
         </div>
         <div className={ classes.center }>
           <Image
-            src='/images/kobe-giveaway-2022-02-19.png'
+            src='/images/kobe-upper-deck-9-coined.png'
             className={ classes.cardImg }
             width={ 150 }
             height={ 252 }
           />
           <div className={ classes.mt }>
             <Typography variant='h3'>
-              PSA 9 Skybox Premium Kobe Bryant Rookie Card!
+              BGS 9 Upper Deck Kobe Bryant Rookie Card!
             </Typography>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Home = (): JSX.Element => {
         <div>
           <EmailForm promotion='CardStock_22_01_29' />
           <Typography variant='caption' align='center' component='p'>
-            Winner will be chosen on January 31st, 2022 and will be asked to
+            Winner will be chosen on April 17th, 2022 and will be asked to
             provide a United States mailing address at that time.
             <br />
             No purchase necessary to enter.
