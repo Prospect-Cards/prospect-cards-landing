@@ -1,0 +1,5 @@
+@media print {
+  body {
+    background-color: #0C0E0F !important;
+  }
+}

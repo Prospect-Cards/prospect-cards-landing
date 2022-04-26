@@ -8,10 +8,16 @@ import Image from 'next/image'
 import Imgix from 'react-imgix'
 import React, { useEffect } from 'react'
 import useStyles from './styles'
+import clsx from 'clsx'
+import {useRouter} from 'next/router'
 
 const Home = (): JSX.Element => {
   const classes = useStyles()
 
+  // Want it to look good for printing? Add `?print=1` to query string.
+  const router = useRouter()
+  const { print } = router.query
+  
   useEffect(() => {
     Mixpanel.track('Landing Page Visit', {})
   }, [Mixpanel])
@@ -29,14 +35,14 @@ const Home = (): JSX.Element => {
         </div>
         <div className={ classes.center }>
           <Image
-            src='/images/kobe-upper-deck-9-coined.png'
+            src='/images/JaysonTatum_Giveaway.png'
             className={ classes.cardImg }
-            width={ 150 }
-            height={ 252 }
+            width={ print ? 250 : 150 }
+            height={ print ? 420 : 252 }
           />
           <div className={ classes.mt }>
             <Typography variant='h3'>
-              BGS 9 Upper Deck Kobe Bryant Rookie Card!
+              Jayson Tatum PSA 10 Optic Shock Rated Rookie!
             </Typography>
           </div>
         </div>
@@ -48,10 +54,8 @@ const Home = (): JSX.Element => {
           display='flex'
           alignItems='center'
           justifyContent='space-around'
-          width='45%'
         >
-          <Image src='/images/LA_Proper_logo.png' width={ 100 } height={ 100 } />
-
+          <img src='/images/TheUnionLogo.png' height='auto' width={ 150 } />
           <Box display='flex' alignItems='center'>
             <Typography variant='h1' className={ classes.times }>
               &times;
@@ -65,9 +69,13 @@ const Home = (): JSX.Element => {
           </a>
         </Box>
         <div>
-          <EmailForm promotion='CardStock_22_01_29' />
+          <div className={ classes.printSpacer  }/>
+
+          <span className={ classes.formContainer }>
+            <EmailForm promotion='CardStock_22_01_29' />
+          </span>
           <Typography variant='caption' align='center' component='p'>
-            Winner will be chosen on April 17th, 2022 and will be asked to
+            Winner will be chosen on May 1st, 2022 and will be asked to
             provide a United States mailing address at that time.
             <br />
             No purchase necessary to enter.

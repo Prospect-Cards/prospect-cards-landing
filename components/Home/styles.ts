@@ -55,5 +55,13 @@ export default makeStyles(
       width: 100,
       textAlign: 'center',
     },
+    '@media print': {
+      formContainer: {
+        display: 'none',
+      },
+      printSpacer: {
+        height: 200,
+      },
+    }
   }),
 )

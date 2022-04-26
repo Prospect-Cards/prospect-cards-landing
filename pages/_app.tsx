@@ -1,5 +1,6 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import 'styles/globals.css'
+import 'styles/print.css'
 import { ApolloProvider } from '@apollo/client'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { useApollo } from 'lib/apollo'
