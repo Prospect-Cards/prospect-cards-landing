@@ -17,7 +17,7 @@ const Home = (): JSX.Element => {
   // Want it to look good for printing? Add `?print=1` to query string.
   const router = useRouter()
   const { print } = router.query
-  
+
   useEffect(() => {
     Mixpanel.track('Landing Page Visit', {})
   }, [Mixpanel])
@@ -72,7 +72,7 @@ const Home = (): JSX.Element => {
           <div className={ classes.printSpacer  }/>
 
           <span className={ classes.formContainer }>
-            <EmailForm promotion='CardStock_22_01_29' />
+            <EmailForm promotion='Union_22_04_30' />
           </span>
           <Typography variant='caption' align='center' component='p'>
             Winner will be chosen on May 1st, 2022 and will be asked to
