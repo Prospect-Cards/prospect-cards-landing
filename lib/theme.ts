@@ -16,7 +16,6 @@ const theme = createMuiTheme({
       input: {
         fontSize: '1.25rem',
         fontFamily: 'acumin-pro, sans-serif;',
-        color: 'white',
         paddingRight: 10,
       },
     },
@@ -43,7 +42,6 @@ const theme = createMuiTheme({
       fontFamily: 'acumin-pro-condensed, sans-serif;',
       fontWeight: 900,
       fontSize: '7rem',
-      color: 'white',
     },
     h2: {
       fontWeight: 500,
@@ -86,7 +84,6 @@ const theme = createMuiTheme({
       letterSpacing: '0.06rem',
       lineHeight: 0.9,
       textTransform: 'uppercase',
-      color: '#969696',
     },
     body1: {
       fontSize: '1rem',
