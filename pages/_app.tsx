@@ -38,19 +38,6 @@ const App = (props: AppProps): JSX.Element => {
             />
           </Head>
           <ApolloProvider client={ apolloClient }>
-            <video
-              autoPlay
-              muted
-              loop
-              id='myVideo'
-              playsInline
-              poster='https://prospect-cards-images.imgix.net/landing/prospect-cards-landing-short.gif'
-            >
-              <source
-                src='https://prospect-cards-images.s3.amazonaws.com/landing/prospect-cards-landing.mp4'
-                type='video/mp4'
-              />
-            </video>
             <div className='content'>
               <div className='overflow'>
                 <AppContainer { ...props } />
