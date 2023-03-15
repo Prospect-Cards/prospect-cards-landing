@@ -39,9 +39,7 @@ const Home = (): JSX.Element => {
         <div className={ classes.inputContainer }>
           <EmailForm promotion='CardStock_21_11_20' />
           <Typography variant='body2' align='center'>
-            Winner will be chosen on November 20th, 2021.
-            <br />
-            No purchase necessary to enter.
+            My email address: e.kenney@prospect.cards
           </Typography>
         </div>
 
