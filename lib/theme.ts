@@ -10,7 +10,6 @@ const theme = createMuiTheme({
     MuiInput: {
       underline: {
         '&::before': {
-          borderColor: '#EFEFEF',
         },
       },
       input: {
@@ -26,15 +25,6 @@ const theme = createMuiTheme({
     },
   },
   palette: {
-    primary: {
-      main: '#D29D1B',
-    },
-    error: {
-      main: '#EFEFEF',
-    },
-    text: {
-      primary: '#EFEFEF',
-    },
   },
   typography: {
     fontFamily: 'acumin-pro, sans-serif;',
