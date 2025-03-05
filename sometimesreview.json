@@ -1,0 +1,5 @@
+{
+  "riskCategory": "STANDARD",
+  "minDeveloperPRs": 10,
+  "requiredApprovals": 1
+}
